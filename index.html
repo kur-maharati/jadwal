@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Pelajaran SMK Maharati</title>
+    <script src="/_sdk/element_sdk.js"></script>
+    <script src="/_sdk/data_sdk.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .jam-aktif {
+            animation: pulse 2s infinite;
+            border: 3px solid #fbbf24;
+            box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.9; transform: scale(1.02); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .glow-yellow {
+            box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
+        }
+        
+        .gradient-blue-yellow {
+            background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 20%, #bbdefb 40%, #90caf9 60%, #64b5f6 80%, #42a5f5 100%);
+        }
+        
+        .gradient-accent {
+            background: linear-gradient(45deg, #1976d2 0%, #2196f3 25%, #03a9f4 50%, #00bcd4 75%, #ffc107 100%);
+        }
+        
+        .card-gradient {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(227,242,253,0.9) 50%, rgba(187,222,251,0.85) 100%);
+            backdrop-filter: blur(10px);
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-full gradient-blue-yellow text-gray-800 font-sans">
+    <div class="container mx-auto px-6 py-4">
+        <!-- Header dengan Logo SMK -->
+        <div class="text-center mb-6">
+            <div class="flex justify-center items-center mb-4">
+                <!-- Logo dengan lingkaran berlapis -->
+                <div class="relative mr-6">
+                    <!-- Lingkaran luar dengan efek glow -->
+                    <div class="absolute inset-0 bg-yellow-400 rounded-full w-24 h-24 animate-pulse glow-yellow opacity-30 scale-110"></div>
+                    <!-- Lingkaran tengah -->
+                    <div class="relative bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-full w-24 h-24 p-1 border-4 border-white shadow-2xl">
+                        <!-- Lingkaran dalam untuk logo -->
+                        <div class="bg-white rounded-full w-full h-full p-2 flex items-center justify-center">
+                            <img src="https://iili.io/KeD4Idg.md.png" alt="Logo SMK Maharati" class="w-16 h-16 object-contain" onerror="this.src=''; this.alt='Logo gagal dimuat'; this.style.display='none';">
+                        </div>
+                    </div>
+                    <!-- Efek lingkaran dekoratif -->
+                    <div class="absolute -top-2 -right-2 w-6 h-6 bg-blue-300 rounded-full opacity-80 animate-bounce"></div>
+                    <div class="absolute -bottom-1 -left-1 w-4 h-4 bg-yellow-200 rounded-full opacity-60"></div>
+                </div>
+                <div>
+                    <h1 id="namaSekolah" class="text-5xl font-bold mb-2 text-shadow bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">SMK MAHARATI</h1>
+                    <p id="tahunAjaran" class="text-2xl font-semibold text-blue-700">Tahun Ajaran 2025/2026</p>
+                </div>
+            </div>
+            <div class="flex justify-center items-center gap-6 mt-6">
+                <div id="waktuSekarang" class="text-2xl font-semibold card-gradient text-blue-800 px-8 py-3 rounded-xl border-2 border-blue-300 shadow-lg"></div>
+                <div id="jamPelajaranSekarang" class="text-lg gradient-accent text-white px-6 py-3 rounded-xl font-bold border-2 border-blue-300 shadow-lg"></div>
+            </div>
+        </div>
+
+        <!-- Jadwal Saat Ini - Airport Style Display -->
+        <div class="card-gradient rounded-2xl p-8 mb-8 border-2 border-blue-300 shadow-2xl">
+            <div class="text-center mb-8">
+                <h2 class="text-4xl font-bold bg-gradient-to-r from-blue-600 via-blue-700 to-yellow-500 bg-clip-text text-transparent mb-4 text-shadow">JADWAL PELAJARAN</h2>
+                <div id="jamAktifInfo" class="text-2xl font-bold gradient-accent text-white px-8 py-4 rounded-xl inline-block border-2 border-blue-300 shadow-lg">
+                    JAM 1 (07:00 - 07:45)
+                </div>
+            </div>
+            
+            <!-- Header Table -->
+            <div class="grid grid-cols-3 gap-6 mb-6 text-xl font-bold gradient-accent p-6 rounded-xl border-2 border-blue-300 shadow-lg">
+                <div class="text-center text-white">🏫 KELAS</div>
+                <div class="text-center text-white">📚 MATA PELAJARAN</div>
+                <div class="text-center text-white">👨‍🏫 GURU PENGAJAR</div>
+            </div>
+            
+            <!-- Jadwal List -->
+            <div id="jadwalSekarang" class="space-y-3">
+                <!-- Will be populated by JavaScript -->
+            </div>
+            
+
+        </div>
+
+        <!-- Admin Panel (Hidden by default) -->
+        <div id="adminPanel" class="hidden card-gradient rounded-xl p-8 mb-6 border-2 border-blue-300 shadow-xl">
+            <h3 class="text-2xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent text-center">🔧 Panel Admin - Kelola Jadwal</h3>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
+                <select id="inputKelas" class="p-3 rounded-lg bg-white text-blue-800 border-2 border-blue-300 font-medium shadow-md focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
+                    <option value="">Pilih Kelas</option>
+                    <option value="X DKV">X DKV</option>
+                    <option value="X TAB A">X TAB A</option>
+                    <option value="X TAB B">X TAB B</option>
+                    <option value="XI DKV">XI DKV</option>
+                    <option value="XI TAB A">XI TAB A</option>
+                    <option value="XI TAB B">XI TAB B</option>
+                    <option value="XII DKV">XII DKV</option>
+                    <option value="XII TAB A">XII TAB A</option>
+                    <option value="XII TAB B">XII TAB B</option>
+                </select>
+                <select id="inputJam" class="p-3 rounded-lg bg-white text-blue-800 border-2 border-blue-300 font-medium shadow-md focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
+                    <option value="">Pilih Jam</option>
+                    <option value="1">Jam 1 (07:00-07:45)</option>
+                    <option value="2">Jam 2 (07:45-08:30)</option>
+                    <option value="3">Jam 3 (08:30-09:15)</option>
+                    <option value="4">Jam 4 (09:30-10:15)</option>
+                    <option value="5">Jam 5 (10:15-11:00)</option>
+                    <option value="6">Jam 6 (11:00-11:45)</option>
+                    <option value="7">Jam 7 (12:30-13:15)</option>
+                    <option value="8">Jam 8 (13:15-14:00)</option>
+                    <option value="9">Jam 9 (14:00-14:45)</option>
+                </select>
+                <input id="inputMapel" type="text" placeholder="Mata Pelajaran" class="p-3 rounded-lg bg-white text-blue-800 placeholder-blue-400 border-2 border-blue-300 font-medium shadow-md focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
+                <input id="inputGuru" type="text" placeholder="Nama Guru" class="p-3 rounded-lg bg-white text-blue-800 placeholder-blue-400 border-2 border-blue-300 font-medium shadow-md focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
+                <select id="inputHari" class="p-3 rounded-lg bg-white text-blue-800 border-2 border-blue-300 font-medium shadow-md focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
+                    <option value="">Pilih Hari</option>
+                    <option value="Senin">Senin</option>
+                    <option value="Selasa">Selasa</option>
+                    <option value="Rabu">Rabu</option>
+                    <option value="Kamis">Kamis</option>
+                    <option value="Jumat">Jumat</option>
+                </select>
+            </div>
+            <div class="flex gap-4 justify-center">
+                <button id="btnTambah" class="gradient-accent hover:opacity-90 text-white px-8 py-3 rounded-xl font-bold border-2 border-blue-300 transition-all duration-300 hover:scale-105 shadow-lg">
+                    ➕ Tambah Jadwal
+                </button>
+                <button id="btnHapusSemua" class="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-8 py-3 rounded-xl font-bold border-2 border-red-300 transition-all duration-300 hover:scale-105 shadow-lg">
+                    🗑️ Hapus Semua
+                </button>
+            </div>
+        </div>
+
+
+
+        <!-- Control Buttons -->
+        <div class="text-center space-x-6">
+            <button id="toggleAdmin" class="card-gradient hover:opacity-90 text-blue-800 px-8 py-4 rounded-xl font-bold border-2 border-blue-300 transition-all duration-300 hover:scale-105 shadow-lg">
+                ⚙️ Kelola Jadwal
+            </button>
+            <button id="fullscreenBtn" class="gradient-accent hover:opacity-90 text-white px-8 py-4 rounded-xl font-bold border-2 border-blue-300 transition-all duration-300 hover:scale-105 shadow-lg">
+                📺 Full Screen
+            </button>
+
+        </div>
+        
+
+    </div>
+
+    <script>
+        // Konfigurasi waktu jam pelajaran
+        const jamPelajaran = [
+            { jam: 1, waktu: "07:00-07:45", mulai: "07:00", selesai: "07:45" },
+            { jam: 2, waktu: "07:45-08:30", mulai: "07:45", selesai: "08:30" },
+            { jam: 3, waktu: "08:30-09:15", mulai: "08:30", selesai: "09:15" },
+            { jam: 4, waktu: "09:30-10:15", mulai: "09:30", selesai: "10:15" },
+            { jam: 5, waktu: "10:15-11:00", mulai: "10:15", selesai: "11:00" },
+            { jam: 6, waktu: "11:00-11:45", mulai: "11:00", selesai: "11:45" },
+            { jam: 7, waktu: "12:30-13:15", mulai: "12:30", selesai: "13:15" },
+            { jam: 8, waktu: "13:15-14:00", mulai: "13:15", selesai: "14:00" },
+            { jam: 9, waktu: "14:00-14:45", mulai: "14:00", selesai: "14:45" }
+        ];
+
+        const kelas = ["X DKV", "X TAB A", "X TAB B", "XI DKV", "XI TAB A", "XI TAB B", "XII DKV", "XII TAB A", "XII TAB B"];
+        let jadwalData = [];
+        let currentRecordCount = 0;
+
+        let isFullscreen = false;
+
+        // Default config untuk Element SDK
+        const defaultConfig = {
+            nama_sekolah: "SMK MAHARATI",
+            tahun_ajaran: "Tahun Ajaran 2025/2026",
+            primary_color: "#3b82f6",
+            secondary_color: "#fbbf24",
+            accent_color: "#1e40af",
+            text_color: "#ffffff",
+            background_color: "#1e40af"
+        };
+
+        // Data handler untuk Data SDK
+        const dataHandler = {
+            onDataChanged(data) {
+                jadwalData = data;
+                currentRecordCount = data.length;
+                renderJadwal();
+            }
+        };
+
+
+
+        // Fungsi untuk mendapatkan jam pelajaran saat ini
+        function getJamSekarang() {
+            const now = new Date();
+            const currentTime = now.toTimeString().slice(0, 5);
+            const currentDay = now.toLocaleDateString('id-ID', { weekday: 'long' });
+            
+            for (let jam of jamPelajaran) {
+                if (currentTime >= jam.mulai && currentTime <= jam.selesai) {
+                    return { jam: jam.jam, hari: currentDay };
+                }
+            }
+            return null;
+        }
+
+        // Update waktu dan jam pelajaran
+        function updateWaktu() {
+            const now = new Date();
+            const waktuStr = now.toLocaleString('id-ID', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            
+            document.getElementById('waktuSekarang').textContent = waktuStr;
+            
+            const jamSekarang = getJamSekarang();
+            const jamInfo = document.getElementById('jamPelajaranSekarang');
+            
+            if (jamSekarang) {
+                const jamData = jamPelajaran.find(j => j.jam === jamSekarang.jam);
+                jamInfo.textContent = `⏰ Jam ${jamSekarang.jam} (${jamData.waktu})`;
+                jamInfo.className = "text-lg gradient-accent text-white px-6 py-3 rounded-xl font-bold border-2 border-blue-300 animate-pulse shadow-lg";
+            } else {
+                jamInfo.style.display = "none";
+            }
+        }
+
+        // Render jadwal airport style
+        function renderJadwal() {
+            const jamSekarang = getJamSekarang();
+            const jadwalContainer = document.getElementById('jadwalSekarang');
+            const jamAktifInfo = document.getElementById('jamAktifInfo');
+            const now = new Date();
+            const currentDay = now.toLocaleDateString('id-ID', { weekday: 'long' });
+            
+            // Tentukan jam yang akan ditampilkan (sekarang dan selanjutnya)
+            let jamUntukDitampilkan = [];
+            
+            if (jamSekarang) {
+                // Jam sekarang
+                jamUntukDitampilkan.push(jamSekarang.jam);
+                
+                // Jam selanjutnya
+                const jamSelanjutnya = jamSekarang.jam + 1;
+                if (jamSelanjutnya <= 9) {
+                    jamUntukDitampilkan.push(jamSelanjutnya);
+                }
+                
+                const jamData = jamPelajaran.find(j => j.jam === jamSekarang.jam);
+                jamAktifInfo.textContent = `⏰ JAM ${jamSekarang.jam} (${jamData.waktu})`;
+                jamAktifInfo.className = "text-2xl font-bold gradient-accent text-white px-8 py-4 rounded-xl inline-block border-2 border-blue-300 shadow-lg animate-pulse";
+            } else {
+                // Jika tidak ada jam sekarang, cari jam berikutnya
+                const currentTime = now.toTimeString().slice(0, 5);
+                for (let jam of jamPelajaran) {
+                    if (currentTime < jam.mulai) {
+                        jamUntukDitampilkan.push(jam.jam);
+                        if (jam.jam + 1 <= 9) {
+                            jamUntukDitampilkan.push(jam.jam + 1);
+                        }
+                        break;
+                    }
+                }
+                
+                if (jamUntukDitampilkan.length > 0) {
+                    const jamData = jamPelajaran.find(j => j.jam === jamUntukDitampilkan[0]);
+                    jamAktifInfo.textContent = `⏰ JAM BERIKUTNYA: ${jamUntukDitampilkan[0]} (${jamData.waktu})`;
+                    jamAktifInfo.className = "text-2xl font-bold bg-blue-600 text-white px-8 py-4 rounded-xl inline-block border-2 border-blue-300 shadow-lg";
+                } else {
+                    jamAktifInfo.textContent = "⏸️ TIDAK ADA JAM PELAJARAN HARI INI";
+                    jamAktifInfo.className = "text-2xl font-bold bg-gray-400 text-gray-700 px-8 py-4 rounded-xl inline-block border-2 border-gray-300 shadow-lg";
+                }
+            }
+            
+            jadwalContainer.innerHTML = '';
+            
+            // Tampilkan jadwal untuk jam yang dipilih
+            jamUntukDitampilkan.forEach((jamKe, jamIndex) => {
+                const jadwalJam = jadwalData.filter(j => 
+                    j.jam_ke === jamKe && 
+                    j.hari === currentDay
+                );
+                
+                if (jadwalJam.length > 0) {
+                    // Header untuk setiap jam
+                    const jamData = jamPelajaran.find(j => j.jam === jamKe);
+                    const headerDiv = document.createElement('div');
+                    headerDiv.className = `text-center mb-4 mt-${jamIndex > 0 ? '8' : '0'}`;
+                    headerDiv.innerHTML = `
+                        <div class="text-2xl font-bold ${jamIndex === 0 ? 'gradient-accent text-white animate-pulse' : 'bg-blue-600 text-white'} px-6 py-3 rounded-xl inline-block border-2 border-blue-300 shadow-lg">
+                            ${jamIndex === 0 ? '🔥 SEKARANG' : '⏭️ SELANJUTNYA'} - JAM ${jamKe} (${jamData.waktu})
+                        </div>
+                    `;
+                    jadwalContainer.appendChild(headerDiv);
+                    
+                    // Sort berdasarkan kelas
+                    jadwalJam.sort((a, b) => a.kelas.localeCompare(b.kelas));
+                    
+                    jadwalJam.forEach((jadwal, index) => {
+                        const row = document.createElement('div');
+                        row.className = `grid grid-cols-3 gap-6 p-6 rounded-xl text-xl font-semibold transition-all duration-500 hover:scale-102 ${
+                            jamIndex === 0 
+                                ? (index % 2 === 0 ? 'gradient-accent text-white border-2 border-yellow-400' : 'bg-gradient-to-r from-blue-600 to-blue-700 text-white border-2 border-yellow-300')
+                                : (index % 2 === 0 ? 'card-gradient border-2 border-blue-300' : 'bg-gradient-to-r from-blue-50 to-blue-100 border-2 border-blue-200')
+                        } shadow-lg fade-in`;
+                        row.style.animationDelay = `${(jamIndex * 5 + index) * 0.1}s`;
+                        
+                        const textColor = jamIndex === 0 ? 'text-white' : 'text-blue-700';
+                        const textColor2 = jamIndex === 0 ? 'text-yellow-200' : 'text-blue-800';
+                        const textColor3 = jamIndex === 0 ? 'text-blue-100' : 'text-blue-600';
+                        
+                        row.innerHTML = `
+                            <div class="text-center font-bold ${textColor} text-2xl">🏫 ${jadwal.kelas}</div>
+                            <div class="text-center ${textColor2} text-xl">📚 ${jadwal.mata_pelajaran}</div>
+                            <div class="text-center ${textColor3} text-lg">👨‍🏫 ${jadwal.guru}</div>
+                        `;
+                        
+                        jadwalContainer.appendChild(row);
+                    });
+                }
+            });
+            
+            // Jika tidak ada jadwal sama sekali
+            if (jadwalContainer.children.length === 0) {
+                const emptyDiv = document.createElement('div');
+                emptyDiv.className = 'text-center py-12';
+                emptyDiv.innerHTML = `
+                    <div class="text-6xl text-blue-400 mb-4">📅</div>
+                    <div class="text-2xl text-blue-700 font-bold">Belum ada jadwal untuk hari ini</div>
+                `;
+                jadwalContainer.appendChild(emptyDiv);
+            }
+        }
+
+        // Tambah jadwal
+        async function tambahJadwal() {
+            const kelas = document.getElementById('inputKelas').value;
+            const jam = parseInt(document.getElementById('inputJam').value);
+            const mapel = document.getElementById('inputMapel').value;
+            const guru = document.getElementById('inputGuru').value;
+            const hari = document.getElementById('inputHari').value;
+            
+            if (!kelas || !jam || !mapel || !guru || !hari) {
+                showMessage('Harap lengkapi semua field!', 'error');
+                return;
+            }
+            
+            if (currentRecordCount >= 999) {
+                showMessage('Maksimal 999 jadwal tercapai. Hapus beberapa jadwal terlebih dahulu.', 'error');
+                return;
+            }
+            
+            const btnTambah = document.getElementById('btnTambah');
+            btnTambah.textContent = '⏳ Menambah...';
+            btnTambah.disabled = true;
+            
+            const result = await window.dataSdk.create({
+                kelas: kelas,
+                jam_ke: jam,
+                mata_pelajaran: mapel,
+                guru: guru,
+                hari: hari
+            });
+            
+            btnTambah.textContent = '➕ Tambah Jadwal';
+            btnTambah.disabled = false;
+            
+            if (result.isOk) {
+                // Reset form
+                document.getElementById('inputKelas').value = '';
+                document.getElementById('inputJam').value = '';
+                document.getElementById('inputMapel').value = '';
+                document.getElementById('inputGuru').value = '';
+                document.getElementById('inputHari').value = '';
+                showMessage('✅ Jadwal berhasil ditambahkan!', 'success');
+            } else {
+                showMessage('❌ Gagal menambah jadwal. Silakan coba lagi.', 'error');
+            }
+        }
+
+        // Hapus semua jadwal
+        async function hapusSemuaJadwal() {
+            if (jadwalData.length === 0) {
+                showMessage('Tidak ada jadwal untuk dihapus.', 'info');
+                return;
+            }
+            
+            const btnHapus = document.getElementById('btnHapusSemua');
+            btnHapus.textContent = '⏳ Menghapus...';
+            btnHapus.disabled = true;
+            
+            for (let jadwal of jadwalData) {
+                await window.dataSdk.delete(jadwal);
+            }
+            
+            btnHapus.textContent = '🗑️ Hapus Semua';
+            btnHapus.disabled = false;
+            showMessage('✅ Semua jadwal berhasil dihapus!', 'success');
+        }
+
+        // Show message
+        function showMessage(text, type) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `fixed top-6 right-6 px-8 py-4 rounded-xl font-bold z-50 border-2 transition-all duration-300 ${
+                type === 'success' ? 'bg-yellow-500 text-blue-900 border-blue-800 glow-yellow' : 
+                type === 'error' ? 'bg-red-500 text-white border-red-800' : 'bg-blue-500 text-white border-blue-800'
+            }`;
+            messageDiv.textContent = text;
+            document.body.appendChild(messageDiv);
+            
+            setTimeout(() => {
+                messageDiv.remove();
+            }, 3000);
+        }
+
+        // Toggle fullscreen mode
+        function toggleFullscreen() {
+            if (!isFullscreen) {
+                // Enter fullscreen
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                } else if (document.documentElement.webkitRequestFullscreen) {
+                    document.documentElement.webkitRequestFullscreen();
+                } else if (document.documentElement.msRequestFullscreen) {
+                    document.documentElement.msRequestFullscreen();
+                }
+                
+                // Hide admin panel and control buttons
+                document.getElementById('adminPanel').classList.add('hidden');
+                document.querySelector('.text-center.space-x-6').classList.add('hidden');
+                
+                isFullscreen = true;
+                showMessage('📺 Full Screen aktif! Tekan ESC untuk keluar', 'success');
+            } else {
+                exitFullscreen();
+            }
+        }
+
+        // Exit fullscreen mode
+        function exitFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+            
+            // Show control buttons
+            document.querySelector('.text-center.space-x-6').classList.remove('hidden');
+            
+            isFullscreen = false;
+            showMessage('📺 Full Screen dimatikan', 'info');
+        }
+
+
+
+        // Handle fullscreen change events
+        function handleFullscreenChange() {
+            if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+                if (isFullscreen) {
+                    exitFullscreen();
+                }
+            }
+        }
+
+        // Handle keyboard events
+        function handleKeyPress(event) {
+            if (event.key === 'Escape' && isFullscreen) {
+                exitFullscreen();
+            }
+            // F11 untuk toggle fullscreen
+            if (event.key === 'F11') {
+                event.preventDefault();
+                toggleFullscreen();
+            }
+        }
+
+        // Element SDK functions
+        async function render(config) {
+            document.getElementById('namaSekolah').textContent = config.nama_sekolah || defaultConfig.nama_sekolah;
+            document.getElementById('tahunAjaran').textContent = config.tahun_ajaran || defaultConfig.tahun_ajaran;
+        }
+
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [
+                    {
+                        get: () => config.primary_color || defaultConfig.primary_color,
+                        set: (value) => {
+                            config.primary_color = value;
+                            window.elementSdk.setConfig({ primary_color: value });
+                        }
+                    },
+                    {
+                        get: () => config.secondary_color || defaultConfig.secondary_color,
+                        set: (value) => {
+                            config.secondary_color = value;
+                            window.elementSdk.setConfig({ secondary_color: value });
+                        }
+                    },
+                    {
+                        get: () => config.accent_color || defaultConfig.accent_color,
+                        set: (value) => {
+                            config.accent_color = value;
+                            window.elementSdk.setConfig({ accent_color: value });
+                        }
+                    },
+                    {
+                        get: () => config.text_color || defaultConfig.text_color,
+                        set: (value) => {
+                            config.text_color = value;
+                            window.elementSdk.setConfig({ text_color: value });
+                        }
+                    }
+                ],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+
+        function mapToEditPanelValues(config) {
+            return new Map([
+                ["nama_sekolah", config.nama_sekolah || defaultConfig.nama_sekolah],
+                ["tahun_ajaran", config.tahun_ajaran || defaultConfig.tahun_ajaran]
+            ]);
+        }
+
+        // Event listeners
+        document.getElementById('toggleAdmin').addEventListener('click', () => {
+            const panel = document.getElementById('adminPanel');
+            panel.classList.toggle('hidden');
+        });
+
+        document.getElementById('btnTambah').addEventListener('click', tambahJadwal);
+        document.getElementById('btnHapusSemua').addEventListener('click', hapusSemuaJadwal);
+        document.getElementById('fullscreenBtn').addEventListener('click', toggleFullscreen);
+
+
+        // Fullscreen event listeners
+        document.addEventListener('fullscreenchange', handleFullscreenChange);
+        document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+        document.addEventListener('msfullscreenchange', handleFullscreenChange);
+        
+        // Keyboard event listeners
+        document.addEventListener('keydown', handleKeyPress);
+
+        // Add sample data for demonstration
+        async function addSampleData() {
+            const now = new Date();
+            const currentDay = now.toLocaleDateString('id-ID', { weekday: 'long' });
+            
+            const sampleSchedules = [
+                { kelas: "X DKV", jam_ke: 1, mata_pelajaran: "Matematika", guru: "Pak Budi Santoso", hari: currentDay },
+                { kelas: "X TAB A", jam_ke: 1, mata_pelajaran: "Bahasa Indonesia", guru: "Bu Sari Dewi", hari: currentDay },
+                { kelas: "XI DKV", jam_ke: 1, mata_pelajaran: "Desain Grafis", guru: "Pak Ahmad Rizki", hari: currentDay },
+                { kelas: "X DKV", jam_ke: 2, mata_pelajaran: "Bahasa Inggris", guru: "Bu Maya Sinta", hari: currentDay },
+                { kelas: "X TAB A", jam_ke: 2, mata_pelajaran: "Fisika", guru: "Pak Dedi Kurnia", hari: currentDay },
+                { kelas: "XI TAB A", jam_ke: 2, mata_pelajaran: "Teknik Bangunan", guru: "Pak Joko Widodo", hari: currentDay },
+                { kelas: "XII DKV", jam_ke: 3, mata_pelajaran: "Praktek Kerja", guru: "Bu Rina Melati", hari: currentDay },
+                { kelas: "XI DKV", jam_ke: 3, mata_pelajaran: "Multimedia", guru: "Pak Andi Pratama", hari: currentDay }
+            ];
+            
+            for (const schedule of sampleSchedules) {
+                if (currentRecordCount < 999) {
+                    await window.dataSdk.create(schedule);
+                }
+            }
+        }
+
+        // Initialize
+        async function init() {
+            // Initialize SDKs
+            if (window.elementSdk) {
+                await window.elementSdk.init({
+                    defaultConfig,
+                    render,
+                    mapToCapabilities,
+                    mapToEditPanelValues
+                });
+            }
+            
+            if (window.dataSdk) {
+                const initResult = await window.dataSdk.init(dataHandler);
+                if (!initResult.isOk) {
+                    console.error("Failed to initialize data SDK");
+                    return;
+                }
+                
+                // Add sample data immediately
+                if (currentRecordCount === 0) {
+                    await addSampleData();
+                    showMessage('📚 Data contoh jadwal telah ditambahkan!', 'success');
+                }
+            }
+            
+            // Update waktu setiap detik
+            updateWaktu();
+            setInterval(updateWaktu, 1000);
+            
+            // Render jadwal awal
+            renderJadwal();
+        }
+
+
+
+        // Start application
+        init();
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98ee166dc2e14ac1',t:'MTc2MDUxODQyMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
