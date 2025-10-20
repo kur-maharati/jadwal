@@ -86,6 +86,7 @@
 
         .time-text {
             font-size: 10px;
+            color: black !important;
         }
     </style>
 </head>
@@ -93,21 +94,7 @@
     <main class="flex flex-col h-full p-2">
         <!-- Header -->
         <header class="header-bg mb-2 flex-shrink-0 relative rounded-2xl p-2 shadow-xl flex items-center justify-between">
-            <!-- Demo Controls -->
-            <div class="absolute top-1 left-1 flex gap-1 flex-wrap">
-                <button id="demoBeforeBtn" class="bg-green-500 hover:bg-green-600 text-white px-2 py-1 rounded text-xs font-semibold transition-all duration-200 shadow-lg cursor-pointer">
-                    Demo: Sebelum Sekolah
-                </button>
-                <button id="demoAfterBtn" class="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded text-xs font-semibold transition-all duration-200 shadow-lg cursor-pointer">
-                    Demo: Setelah Sekolah
-                </button>
-                <button id="demoWeekendBtn" class="bg-purple-500 hover:bg-purple-600 text-white px-2 py-1 rounded text-xs font-semibold transition-all duration-200 shadow-lg cursor-pointer">
-                    Demo: Weekend
-                </button>
-                <button id="demoNormalBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded text-xs font-semibold transition-all duration-200 shadow-lg cursor-pointer ring-2 ring-white">
-                    Mode Normal
-                </button>
-            </div>
+
 
             <button id="fullscreenBtn" class="absolute top-1 right-1 bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 flex items-center justify-center gap-1 shadow-lg hover:shadow-xl cursor-pointer min-w-[100px] min-h-[32px]">
                 <span id="fullscreenIcon" class="pointer-events-none">⛶</span>
@@ -161,173 +148,173 @@
 
         <!-- Schedule Grid -->
         <div class="grid grid-cols-3 gap-x-4 gap-y-1 flex-1 min-h-0">
-            <!-- Kelas X DKV -->
+            <!-- Kelas 1 -->
             <div class="schedule-card rounded-2xl text-center flex flex-col" style="padding: 2px;">
                 <h2 class="text-base font-bold mb-0.5 class-title">X DKV</h2>
                 <div class="space-y-0.5 flex-1">
-                    <div class="current-subject rounded-lg p-1.5" id="current-X-DKV">
+                    <div class="current-subject rounded-lg p-1.5" id="current-KELAS-1">
                         <div class="text-xs opacity-90 mb-0.2 bg-green-400 text-black px-2 py-1 rounded-md font-bold inline-block">Sekarang</div>
-                        <div class="font-bold text-sm" id="current-subject-X-DKV">Matematika</div>
-                        <div class="text-sm opacity-90" id="current-teacher-X-DKV">Pak Budi</div>
-                        <div class="time-text opacity-90" id="current-time-X-DKV">07:15 - 07:55</div>
+                        <div class="font-bold text-sm" id="current-subject-KELAS-1">Mata Pelajaran</div>
+                        <div class="text-sm opacity-90" id="current-teacher-KELAS-1">Nama Guru</div>
+                        <div class="time-text opacity-90" id="current-time-KELAS-1">07:15 - 07:55</div>
                     </div>
-                    <div class="next-subject rounded-lg p-1.5" id="next-X-DKV">
+                    <div class="next-subject rounded-lg p-1.5" id="next-KELAS-1">
                         <div class="text-xs opacity-90 mb-0.2 bg-red-500 text-white px-2 py-1 rounded-md font-bold inline-block">Selanjutnya</div>
-                        <div class="font-bold text-sm" id="next-subject-X-DKV">Bahasa Indonesia</div>
-                        <div class="text-sm opacity-90" id="next-teacher-X-DKV">Bu Sari</div>
-                        <div class="time-text opacity-90" id="next-time-X-DKV">07:55 - 08:35</div>
+                        <div class="font-bold text-sm" id="next-subject-KELAS-1">Mata Pelajaran</div>
+                        <div class="text-sm opacity-90" id="next-teacher-KELAS-1">Nama Guru</div>
+                        <div class="time-text opacity-90" id="next-time-KELAS-1">07:55 - 08:35</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Kelas X TAB A -->
+            <!-- Kelas 2 -->
             <div class="schedule-card rounded-2xl text-center flex flex-col" style="padding: 2px;">
                 <h2 class="text-base font-bold mb-0.5 class-title">X TAB A</h2>
                 <div class="space-y-0.5 flex-1">
-                    <div class="current-subject rounded-lg p-1.5" id="current-X-TAB-A">
+                    <div class="current-subject rounded-lg p-1.5" id="current-KELAS-2">
                         <div class="text-xs opacity-90 mb-0.2 bg-green-400 text-black px-2 py-1 rounded-md font-bold inline-block">Sekarang</div>
-                        <div class="font-bold text-sm" id="current-subject-X-TAB-A">Fisika</div>
-                        <div class="text-sm opacity-90" id="current-teacher-X-TAB-A">Pak Dedi</div>
-                        <div class="time-text opacity-90" id="current-time-X-TAB-A">07:15 - 07:55</div>
+                        <div class="font-bold text-sm" id="current-subject-KELAS-2">Mata Pelajaran</div>
+                        <div class="text-sm opacity-90" id="current-teacher-KELAS-2">Nama Guru</div>
+                        <div class="time-text opacity-90" id="current-time-KELAS-2">07:15 - 07:55</div>
                     </div>
-                    <div class="next-subject rounded-lg p-1.5" id="next-X-TAB-A">
+                    <div class="next-subject rounded-lg p-1.5" id="next-KELAS-2">
                         <div class="text-xs opacity-90 mb-0.2 bg-red-500 text-white px-2 py-1 rounded-md font-bold inline-block">Selanjutnya</div>
-                        <div class="font-bold text-sm" id="next-subject-X-TAB-A">Kimia</div>
-                        <div class="text-sm opacity-90" id="next-teacher-X-TAB-A">Bu Lina</div>
-                        <div class="time-text opacity-90" id="next-time-X-TAB-A">07:55 - 08:35</div>
+                        <div class="font-bold text-sm" id="next-subject-KELAS-2">Mata Pelajaran</div>
+                        <div class="text-sm opacity-90" id="next-teacher-KELAS-2">Nama Guru</div>
+                        <div class="time-text opacity-90" id="next-time-KELAS-2">07:55 - 08:35</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Kelas X TAB B -->
+            <!-- Kelas 3 -->
             <div class="schedule-card rounded-2xl text-center flex flex-col" style="padding: 2px;">
                 <h2 class="text-base font-bold mb-0.5 class-title">X TAB B</h2>
                 <div class="space-y-0.5 flex-1">
-                    <div class="current-subject rounded-lg p-1.5" id="current-X-TAB-B">
+                    <div class="current-subject rounded-lg p-1.5" id="current-KELAS-3">
                         <div class="text-xs opacity-90 mb-0.2 bg-green-400 text-black px-2 py-1 rounded-md font-bold inline-block">Sekarang</div>
-                        <div class="font-bold text-sm" id="current-subject-X-TAB-B">Biologi</div>
-                        <div class="text-sm opacity-90" id="current-teacher-X-TAB-B">Bu Tina</div>
-                        <div class="time-text opacity-90" id="current-time-X-TAB-B">07:15 - 07:55</div>
+                        <div class="font-bold text-sm" id="current-subject-KELAS-3">Mata Pelajaran</div>
+                        <div class="text-sm opacity-90" id="current-teacher-KELAS-3">Nama Guru</div>
+                        <div class="time-text opacity-90" id="current-time-KELAS-3">07:15 - 07:55</div>
                     </div>
-                    <div class="next-subject rounded-lg p-1.5" id="next-X-TAB-B">
+                    <div class="next-subject rounded-lg p-1.5" id="next-KELAS-3">
                         <div class="text-xs opacity-90 mb-0.2 bg-red-500 text-white px-2 py-1 rounded-md font-bold inline-block">Selanjutnya</div>
-                        <div class="font-bold text-sm" id="next-subject-X-TAB-B">Matematika</div>
-                        <div class="text-sm opacity-90" id="next-teacher-X-TAB-B">Pak Budi</div>
-                        <div class="time-text opacity-90" id="next-time-X-TAB-B">07:55 - 08:35</div>
+                        <div class="font-bold text-sm" id="next-subject-KELAS-3">Mata Pelajaran</div>
+                        <div class="text-sm opacity-90" id="next-teacher-KELAS-3">Nama Guru</div>
+                        <div class="time-text opacity-90" id="next-time-KELAS-3">07:55 - 08:35</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Kelas XI DKV -->
+            <!-- Kelas 4 -->
             <div class="schedule-card rounded-2xl text-center flex flex-col" style="padding: 2px;">
                 <h2 class="text-base font-bold mb-0.5 class-title">XI DKV</h2>
                 <div class="space-y-0.5 flex-1">
-                    <div class="current-subject rounded-lg p-1.5" id="current-XI-DKV">
+                    <div class="current-subject rounded-lg p-1.5" id="current-KELAS-4">
                         <div class="text-xs opacity-90 mb-0.2 bg-green-400 text-black px-2 py-1 rounded-md font-bold inline-block">Sekarang</div>
-                        <div class="font-bold text-sm" id="current-subject-XI-DKV">Desain Grafis</div>
-                        <div class="text-sm opacity-90" id="current-teacher-XI-DKV">Pak Andi</div>
-                        <div class="time-text opacity-90" id="current-time-XI-DKV">07:15 - 07:55</div>
+                        <div class="font-bold text-sm" id="current-subject-KELAS-4">Mata Pelajaran</div>
+                        <div class="text-sm opacity-90" id="current-teacher-KELAS-4">Nama Guru</div>
+                        <div class="time-text opacity-90" id="current-time-KELAS-4">07:15 - 07:55</div>
                     </div>
-                    <div class="next-subject rounded-lg p-1.5" id="next-XI-DKV">
+                    <div class="next-subject rounded-lg p-1.5" id="next-KELAS-4">
                         <div class="text-xs opacity-90 mb-0.2 bg-red-500 text-white px-2 py-1 rounded-md font-bold inline-block">Selanjutnya</div>
-                        <div class="font-bold text-sm" id="next-subject-XI-DKV">Fotografi</div>
-                        <div class="text-sm opacity-90" id="next-teacher-XI-DKV">Bu Dina</div>
-                        <div class="time-text opacity-90" id="next-time-XI-DKV">07:55 - 08:35</div>
+                        <div class="font-bold text-sm" id="next-subject-KELAS-4">Mata Pelajaran</div>
+                        <div class="text-sm opacity-90" id="next-teacher-KELAS-4">Nama Guru</div>
+                        <div class="time-text opacity-90" id="next-time-KELAS-4">07:55 - 08:35</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Kelas XI TAB A -->
+            <!-- Kelas 5 -->
             <div class="schedule-card rounded-2xl text-center flex flex-col" style="padding: 2px;">
                 <h2 class="text-base font-bold mb-0.5 class-title">XI TAB A</h2>
                 <div class="space-y-0.5 flex-1">
-                    <div class="current-subject rounded-lg p-1.5" id="current-XI-TAB-A">
+                    <div class="current-subject rounded-lg p-1.5" id="current-KELAS-5">
                         <div class="text-xs opacity-90 mb-0.2 bg-green-400 text-black px-2 py-1 rounded-md font-bold inline-block">Sekarang</div>
-                        <div class="font-bold text-sm" id="current-subject-XI-TAB-A">Akuntansi</div>
-                        <div class="text-sm opacity-90" id="current-teacher-XI-TAB-A">Bu Ani</div>
-                        <div class="time-text opacity-90" id="current-time-XI-TAB-A">07:15 - 07:55</div>
+                        <div class="font-bold text-sm" id="current-subject-KELAS-5">Mata Pelajaran</div>
+                        <div class="text-sm opacity-90" id="current-teacher-KELAS-5">Nama Guru</div>
+                        <div class="time-text opacity-90" id="current-time-KELAS-5">07:15 - 07:55</div>
                     </div>
-                    <div class="next-subject rounded-lg p-1.5" id="next-XI-TAB-A">
+                    <div class="next-subject rounded-lg p-1.5" id="next-KELAS-5">
                         <div class="text-xs opacity-90 mb-0.2 bg-red-500 text-white px-2 py-1 rounded-md font-bold inline-block">Selanjutnya</div>
-                        <div class="font-bold text-sm" id="next-subject-XI-TAB-A">Ekonomi</div>
-                        <div class="text-sm opacity-90" id="next-teacher-XI-TAB-A">Bu Wati</div>
-                        <div class="time-text opacity-90" id="next-time-XI-TAB-A">07:55 - 08:35</div>
+                        <div class="font-bold text-sm" id="next-subject-KELAS-5">Mata Pelajaran</div>
+                        <div class="text-sm opacity-90" id="next-teacher-KELAS-5">Nama Guru</div>
+                        <div class="time-text opacity-90" id="next-time-KELAS-5">07:55 - 08:35</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Kelas XI TAB B -->
+            <!-- Kelas 6 -->
             <div class="schedule-card rounded-2xl text-center flex flex-col" style="padding: 2px;">
                 <h2 class="text-base font-bold mb-0.5 class-title">XI TAB B</h2>
                 <div class="space-y-0.5 flex-1">
-                    <div class="current-subject rounded-lg p-1.5" id="current-XI-TAB-B">
+                    <div class="current-subject rounded-lg p-1.5" id="current-KELAS-6">
                         <div class="text-xs opacity-90 mb-0.2 bg-green-400 text-black px-2 py-1 rounded-md font-bold inline-block">Sekarang</div>
-                        <div class="font-bold text-sm" id="current-subject-XI-TAB-B">Manajemen</div>
-                        <div class="text-sm opacity-90" id="current-teacher-XI-TAB-B">Pak Eko</div>
-                        <div class="time-text opacity-90" id="current-time-XI-TAB-B">07:15 - 07:55</div>
+                        <div class="font-bold text-sm" id="current-subject-KELAS-6">Mata Pelajaran</div>
+                        <div class="text-sm opacity-90" id="current-teacher-KELAS-6">Nama Guru</div>
+                        <div class="time-text opacity-90" id="current-time-KELAS-6">07:15 - 07:55</div>
                     </div>
-                    <div class="next-subject rounded-lg p-1.5" id="next-XI-TAB-B">
+                    <div class="next-subject rounded-lg p-1.5" id="next-KELAS-6">
                         <div class="text-xs opacity-90 mb-0.2 bg-red-500 text-white px-2 py-1 rounded-md font-bold inline-block">Selanjutnya</div>
-                        <div class="font-bold text-sm" id="next-subject-XI-TAB-B">Pemasaran</div>
-                        <div class="text-sm opacity-90" id="next-teacher-XI-TAB-B">Bu Indah</div>
-                        <div class="time-text opacity-90" id="next-time-XI-TAB-B">07:55 - 08:35</div>
+                        <div class="font-bold text-sm" id="next-subject-KELAS-6">Mata Pelajaran</div>
+                        <div class="text-sm opacity-90" id="next-teacher-KELAS-6">Nama Guru</div>
+                        <div class="time-text opacity-90" id="next-time-KELAS-6">07:55 - 08:35</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Kelas XII DKV -->
+            <!-- Kelas 7 -->
             <div class="schedule-card rounded-2xl text-center flex flex-col" style="padding: 2px;">
                 <h2 class="text-base font-bold mb-0.5 class-title">XII DKV</h2>
                 <div class="space-y-0.5 flex-1">
-                    <div class="current-subject rounded-lg p-1.5" id="current-XII-DKV">
+                    <div class="current-subject rounded-lg p-1.5" id="current-KELAS-7">
                         <div class="text-xs opacity-90 mb-0.2 bg-green-400 text-black px-2 py-1 rounded-md font-bold inline-block">Sekarang</div>
-                        <div class="font-bold text-sm" id="current-subject-XII-DKV">Portfolio</div>
-                        <div class="text-sm opacity-90" id="current-teacher-XII-DKV">Pak Andi</div>
-                        <div class="time-text opacity-90" id="current-time-XII-DKV">07:15 - 07:55</div>
+                        <div class="font-bold text-sm" id="current-subject-KELAS-7">Mata Pelajaran</div>
+                        <div class="text-sm opacity-90" id="current-teacher-KELAS-7">Nama Guru</div>
+                        <div class="time-text opacity-90" id="current-time-KELAS-7">07:15 - 07:55</div>
                     </div>
-                    <div class="next-subject rounded-lg p-1.5" id="next-XII-DKV">
+                    <div class="next-subject rounded-lg p-1.5" id="next-KELAS-7">
                         <div class="text-xs opacity-90 mb-0.2 bg-red-500 text-white px-2 py-1 rounded-md font-bold inline-block">Selanjutnya</div>
-                        <div class="font-bold text-sm" id="next-subject-XII-DKV">Animasi</div>
-                        <div class="text-sm opacity-90" id="next-teacher-XII-DKV">Pak Rizki</div>
-                        <div class="time-text opacity-90" id="next-time-XII-DKV">07:55 - 08:35</div>
+                        <div class="font-bold text-sm" id="next-subject-KELAS-7">Mata Pelajaran</div>
+                        <div class="text-sm opacity-90" id="next-teacher-KELAS-7">Nama Guru</div>
+                        <div class="time-text opacity-90" id="next-time-KELAS-7">07:55 - 08:35</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Kelas XII TAB A -->
+            <!-- Kelas 8 -->
             <div class="schedule-card rounded-2xl text-center flex flex-col" style="padding: 2px;">
                 <h2 class="text-base font-bold mb-0.5 class-title">XII TAB A</h2>
                 <div class="space-y-0.5 flex-1">
-                    <div class="current-subject rounded-lg p-1.5" id="current-XII-TAB-A">
+                    <div class="current-subject rounded-lg p-1.5" id="current-KELAS-8">
                         <div class="text-xs opacity-90 mb-0.2 bg-green-400 text-black px-2 py-1 rounded-md font-bold inline-block">Sekarang</div>
-                        <div class="font-bold text-sm" id="current-subject-XII-TAB-A">Praktik Kerja</div>
-                        <div class="text-sm opacity-90" id="current-teacher-XII-TAB-A">Bu Ani</div>
-                        <div class="time-text opacity-90" id="current-time-XII-TAB-A">07:15 - 07:55</div>
+                        <div class="font-bold text-sm" id="current-subject-KELAS-8">Mata Pelajaran</div>
+                        <div class="text-sm opacity-90" id="current-teacher-KELAS-8">Nama Guru</div>
+                        <div class="time-text opacity-90" id="current-time-KELAS-8">07:15 - 07:55</div>
                     </div>
-                    <div class="next-subject rounded-lg p-1.5" id="next-XII-TAB-A">
+                    <div class="next-subject rounded-lg p-1.5" id="next-KELAS-8">
                         <div class="text-xs opacity-90 mb-0.2 bg-red-500 text-white px-2 py-1 rounded-md font-bold inline-block">Selanjutnya</div>
-                        <div class="font-bold text-sm" id="next-subject-XII-TAB-A">Kewirausahaan</div>
-                        <div class="text-sm opacity-90" id="next-teacher-XII-TAB-A">Bu Indah</div>
-                        <div class="time-text opacity-90" id="next-time-XII-TAB-A">07:55 - 08:35</div>
+                        <div class="font-bold text-sm" id="next-subject-KELAS-8">Mata Pelajaran</div>
+                        <div class="text-sm opacity-90" id="next-teacher-KELAS-8">Nama Guru</div>
+                        <div class="time-text opacity-90" id="next-time-KELAS-8">07:55 - 08:35</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Kelas XII TAB B -->
+            <!-- Kelas 9 -->
             <div class="schedule-card rounded-2xl text-center flex flex-col" style="padding: 2px;">
                 <h2 class="text-base font-bold mb-0.5 class-title">XII TAB B</h2>
                 <div class="space-y-0.5 flex-1">
-                    <div class="current-subject rounded-lg p-1.5" id="current-XII-TAB-B">
+                    <div class="current-subject rounded-lg p-1.5" id="current-KELAS-9">
                         <div class="text-xs opacity-90 mb-0.2 bg-green-400 text-black px-2 py-1 rounded-md font-bold inline-block">Sekarang</div>
-                        <div class="font-bold text-sm" id="current-subject-XII-TAB-B">Simulasi Digital</div>
-                        <div class="text-sm opacity-90" id="current-teacher-XII-TAB-B">Pak Rizki</div>
-                        <div class="time-text opacity-90" id="current-time-XII-TAB-B">07:15 - 07:55</div>
+                        <div class="font-bold text-sm" id="current-subject-KELAS-9">Mata Pelajaran</div>
+                        <div class="text-sm opacity-90" id="current-teacher-KELAS-9">Nama Guru</div>
+                        <div class="time-text opacity-90" id="current-time-KELAS-9">07:15 - 07:55</div>
                     </div>
-                    <div class="next-subject rounded-lg p-1.5" id="next-XII-TAB-B">
+                    <div class="next-subject rounded-lg p-1.5" id="next-KELAS-9">
                         <div class="text-xs opacity-90 mb-0.2 bg-red-500 text-white px-2 py-1 rounded-md font-bold inline-block">Selanjutnya</div>
-                        <div class="font-bold text-sm" id="next-subject-XII-TAB-B">Bahasa Inggris</div>
-                        <div class="text-sm opacity-90" id="next-teacher-XII-TAB-B">Ms. Linda</div>
-                        <div class="time-text opacity-90" id="next-time-XII-TAB-B">07:55 - 08:35</div>
+                        <div class="font-bold text-sm" id="next-subject-KELAS-9">Mata Pelajaran</div>
+                        <div class="text-sm opacity-90" id="next-teacher-KELAS-9">Nama Guru</div>
+                        <div class="time-text opacity-90" id="next-time-KELAS-9">07:55 - 08:35</div>
                     </div>
                 </div>
             </div>
@@ -335,250 +322,823 @@
     </main>
 
     <script>
+        // Data hari libur nasional Indonesia 2024-2026
+        const nationalHolidays = {
+            // Format: 'YYYY-MM-DD': 'Nama Hari Libur'
+            '2024-01-01': 'Tahun Baru Masehi',
+            '2024-02-08': 'Isra Mikraj',
+            '2024-02-10': 'Tahun Baru Imlek',
+            '2024-03-11': 'Hari Raya Nyepi',
+            '2024-03-29': 'Wafat Isa Almasih',
+            '2024-04-08': 'Hari Raya Idul Fitri (Hari ke-1)',
+            '2024-04-09': 'Hari Raya Idul Fitri (Hari ke-2)',
+            '2024-04-10': 'Hari Raya Idul Fitri (Hari ke-3)',
+            '2024-04-11': 'Hari Raya Idul Fitri (Hari ke-4)',
+            '2024-04-12': 'Hari Raya Idul Fitri (Hari ke-5)',
+            '2024-05-01': 'Hari Buruh Internasional',
+            '2024-05-09': 'Kenaikan Isa Almasih',
+            '2024-05-23': 'Hari Raya Waisak',
+            '2024-06-01': 'Hari Lahir Pancasila',
+            '2024-06-17': 'Hari Raya Idul Adha',
+            '2024-07-07': 'Tahun Baru Hijriah',
+            '2024-08-17': 'Hari Kemerdekaan RI',
+            '2024-09-16': 'Maulid Nabi Muhammad SAW',
+            '2024-12-25': 'Hari Raya Natal',
+            
+            // Tahun 2025
+            '2025-01-01': 'Tahun Baru Masehi',
+            '2025-01-29': 'Tahun Baru Imlek',
+            '2025-02-27': 'Isra Mikraj',
+            '2025-03-14': 'Hari Raya Nyepi',
+            '2025-03-30': 'Hari Raya Idul Fitri (Hari ke-1)',
+            '2025-03-31': 'Hari Raya Idul Fitri (Hari ke-2)',
+            '2025-04-01': 'Hari Raya Idul Fitri (Hari ke-3)',
+            '2025-04-02': 'Hari Raya Idul Fitri (Hari ke-4)',
+            '2025-04-18': 'Wafat Isa Almasih',
+            '2025-05-01': 'Hari Buruh Internasional',
+            '2025-05-12': 'Hari Raya Waisak',
+            '2025-05-29': 'Kenaikan Isa Almasih',
+            '2025-06-01': 'Hari Lahir Pancasila',
+            '2025-06-06': 'Hari Raya Idul Adha',
+            '2025-06-26': 'Tahun Baru Hijriah',
+            '2025-08-17': 'Hari Kemerdekaan RI',
+            '2025-09-05': 'Maulid Nabi Muhammad SAW',
+            '2025-12-25': 'Hari Raya Natal',
+            
+            // Tahun 2026
+            '2026-01-01': 'Tahun Baru Masehi',
+            '2026-02-16': 'Isra Mikraj',
+            '2026-02-17': 'Tahun Baru Imlek',
+            '2026-03-03': 'Hari Raya Nyepi',
+            '2026-03-20': 'Hari Raya Idul Fitri (Hari ke-1)',
+            '2026-03-21': 'Hari Raya Idul Fitri (Hari ke-2)',
+            '2026-03-23': 'Hari Raya Idul Fitri (Hari ke-3)',
+            '2026-03-24': 'Hari Raya Idul Fitri (Hari ke-4)',
+            '2026-04-03': 'Wafat Isa Almasih',
+            '2026-05-01': 'Hari Buruh Internasional',
+            '2026-05-14': 'Kenaikan Isa Almasih',
+            '2026-05-26': 'Hari Raya Idul Adha',
+            '2026-06-01': 'Hari Lahir Pancasila',
+            '2026-06-02': 'Hari Raya Waisak',
+            '2026-06-16': 'Tahun Baru Hijriah',
+            '2026-08-17': 'Hari Kemerdekaan RI',
+            '2026-08-25': 'Maulid Nabi Muhammad SAW',
+            '2026-12-25': 'Hari Raya Natal'
+        };
+
+        // Fungsi untuk mengecek apakah hari ini libur nasional
+        function isNationalHoliday(date = new Date()) {
+            const dateString = date.toISOString().split('T')[0]; // Format YYYY-MM-DD
+            return nationalHolidays[dateString] || null;
+        }
+
+        // Data jadwal khusus hari Sabtu (hanya sampai jam ke-6)
+        const saturdaySchedules = {
+            'KELAS-1': [
+                { subject: 'Fotografi dan Videografi', teacher: 'Fakhrul Muja, S.I.Kom.', time: '07:15 - 07:55', period: 1 },
+                { subject: 'Fotografi dan Videografi', teacher: 'Fakhrul Muja, S.I.Kom.', time: '07:55 - 08:35', period: 2 },
+                { subject: 'Fotografi dan Videografi', teacher: 'Fakhrul Muja, S.I.Kom.', time: '08:35 - 09:15', period: 3 },
+                { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '09:30 - 10:10', period: 4 },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '10:10 - 10:50', period: 5 },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '10:50 - 11:30', period: 6 }
+            ],
+            'KELAS-2': [
+                { subject: 'Bimbingan dan Konseling', teacher: 'Norma Ida Royana, S.Pd., M.Pd.', time: '07:15 - 07:55', period: 1 },
+                { subject: 'Bahasa Dayak', teacher: 'Novia Permata Sari, S.Pd., Gr.', time: '07:55 - 08:35', period: 2 },
+                { subject: 'Bahasa Dayak', teacher: 'Novia Permata Sari, S.Pd., Gr.', time: '08:35 - 09:15', period: 3 },
+                { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '09:30 - 10:10', period: 4 },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '10:10 - 10:50', period: 5 },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '10:50 - 11:30', period: 6 }
+            ],
+            'KELAS-3': [
+                { subject: 'Bahasa Inggris', teacher: 'Febriyanti Novitasari, S.Pd., Gr.', time: '07:15 - 07:55', period: 1 },
+                { subject: 'Bahasa Inggris', teacher: 'Febriyanti Novitasari, S.Pd., Gr.', time: '07:55 - 08:35', period: 2 },
+                { subject: 'Bimbingan dan Konseling', teacher: 'Norma Ida Royana, S.Pd., M.Pd.', time: '08:35 - 09:15', period: 3 },
+                { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '09:30 - 10:10', period: 4 },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '10:10 - 10:50', period: 5 },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '10:50 - 11:30', period: 6 }
+            ],
+            'KELAS-4': [
+                { subject: 'Bahasa Inggris', teacher: 'Ahmad Jumeidi, S.Pd., Gr.', time: '07:15 - 07:55', period: 1 },
+                { subject: 'Bahasa Inggris', teacher: 'Ahmad Jumeidi, S.Pd., Gr.', time: '07:55 - 08:35', period: 2 },
+                { subject: 'Bahasa Inggris', teacher: 'Ahmad Jumeidi, S.Pd., Gr.', time: '08:35 - 09:15', period: 3 },
+                { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '09:30 - 10:10', period: 4 },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '10:10 - 10:50', period: 5 },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '10:50 - 11:30', period: 6 }
+            ],
+            'KELAS-5': [
+                { subject: 'Bahasa Indonesia', teacher: 'Via Veronica, S.Pd.', time: '07:15 - 07:55', period: 1 },
+                { subject: 'Bahasa Indonesia', teacher: 'Via Veronica, S.Pd.', time: '07:55 - 08:35', period: 2 },
+                { subject: 'Bahasa Indonesia', teacher: 'Via Veronica, S.Pd.', time: '08:35 - 09:15', period: 3 },
+                { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '09:30 - 10:10', period: 4 },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '10:10 - 10:50', period: 5 },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '10:50 - 11:30', period: 6 }
+            ],
+            'KELAS-6': [
+                { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '07:15 - 07:55', period: 1 },
+                { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '07:55 - 08:35', period: 2 },
+                { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '08:35 - 09:15', period: 3 },
+                { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '09:30 - 10:10', period: 4 },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '10:10 - 10:50', period: 5 },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '10:50 - 11:30', period: 6 }
+            ],
+            'KELAS-7': [
+                { subject: 'Matematika', teacher: 'Rudi Restanto, S.Pd., M.Pd., Gr.', time: '07:15 - 07:55', period: 1 },
+                { subject: 'Matematika', teacher: 'Rudi Restanto, S.Pd., M.Pd., Gr.', time: '07:55 - 08:35', period: 2 },
+                { subject: 'Bimbingan dan Konseling', teacher: 'Aldo Tulus Prasetyo, S.Pd., Gr.', time: '08:35 - 09:15', period: 3 },
+                { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '09:30 - 10:10', period: 4 },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '10:10 - 10:50', period: 5 },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '10:50 - 11:30', period: 6 }
+            ],
+            'KELAS-8': [
+                { subject: 'Olahraga Tradisional', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '07:15 - 07:55', period: 1 },
+                { subject: 'Olahraga Tradisional', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '07:55 - 08:35', period: 2 },
+                { subject: 'Olahraga Tradisional', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '08:35 - 09:15', period: 3 },
+                { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '09:30 - 10:10', period: 4 },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '10:10 - 10:50', period: 5 },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '10:50 - 11:30', period: 6 }
+            ],
+            'KELAS-9': [
+                { subject: 'Bahasa Indonesia', teacher: 'Maria Anggelina, S.Pd.', time: '07:15 - 07:55', period: 1 },
+                { subject: 'Bahasa Indonesia', teacher: 'Maria Anggelina, S.Pd.', time: '07:55 - 08:35', period: 2 },
+                { subject: 'Bahasa Indonesia', teacher: 'Maria Anggelina, S.Pd.', time: '08:35 - 09:15', period: 3 },
+                { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '09:30 - 10:10', period: 4 },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '10:10 - 10:50', period: 5 },
+                { subject: 'Pengembangan Diri dan Numerasi', teacher: 'Guru Wali dan Kesiswaan', time: '10:50 - 11:30', period: 6 }
+            ]
+        };
+
         // Data jadwal untuk setiap kelas (Senin-Kamis)
         const schedules = {
-            'X-DKV': [
-                { subject: 'Matematika', teacher: 'Pak Budi', time: '07:15 - 07:55', period: 1 },
-                { subject: 'Bahasa Indonesia', teacher: 'Bu Sari', time: '07:55 - 08:35', period: 2 },
-                { subject: 'Desain Dasar', teacher: 'Pak Andi', time: '08:35 - 09:15', period: 3 },
+            'KELAS-1': [
+                { subject: 'Desain Grafis', teacher: 'Siti Andini, S.Ds.', time: '07:15 - 07:55', period: 1 },
+                { subject: 'Desain Grafis', teacher: 'Siti Andini, S.Ds.', time: '07:55 - 08:35', period: 2 },
+                { subject: 'Desain Grafis', teacher: 'Siti Andini, S.Ds.', time: '08:35 - 09:15', period: 3 },
                 { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
-                { subject: 'Seni Budaya', teacher: 'Bu Maya', time: '09:30 - 10:10', period: 4 },
-                { subject: 'Bahasa Inggris', teacher: 'Ms. Linda', time: '10:10 - 10:50', period: 5 },
-                { subject: 'Fisika', teacher: 'Pak Dedi', time: '10:50 - 11:30', period: 6 },
+                { subject: 'Dasar Desain Komunikasi Visual', teacher: 'Indrawan Budi Pangestu, S.Pd.', time: '09:30 - 10:10', period: 4 },
+                { subject: 'Dasar Desain Komunikasi Visual', teacher: 'Indrawan Budi Pangestu, S.Pd.', time: '10:10 - 10:50', period: 5 },
+                { subject: 'Dasar Desain Komunikasi Visual', teacher: 'Indrawan Budi Pangestu, S.Pd.', time: '10:50 - 11:30', period: 6 },
                 { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
-                { subject: 'Sejarah', teacher: 'Bu Rina', time: '13:00 - 13:40', period: 7 },
-                { subject: 'PKN', teacher: 'Pak Hadi', time: '13:40 - 14:20', period: 8 },
-                { subject: 'Agama', teacher: 'Pak Usman', time: '14:20 - 15:00', period: 9 }
+                { subject: 'Desain Grafis', teacher: 'Nurul Jihan Fadillah, S.Ds.', time: '13:00 - 13:40', period: 7 },
+                { subject: 'Desain Grafis', teacher: 'Nurul Jihan Fadillah, S.Ds.', time: '13:40 - 14:20', period: 8 },
+                { subject: 'Desain Grafis', teacher: 'Nurul Jihan Fadillah, S.Ds.', time: '14:20 - 15:00', period: 9 }
             ],
-            'X-TAB-A': [
-                { subject: 'Fisika', teacher: 'Pak Dedi', time: '07:15 - 07:55', period: 1 },
-                { subject: 'Kimia', teacher: 'Bu Lina', time: '07:55 - 08:35', period: 2 },
-                { subject: 'Matematika', teacher: 'Pak Budi', time: '08:35 - 09:15', period: 3 },
-                { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
-                { subject: 'Biologi', teacher: 'Bu Tina', time: '09:30 - 10:10', period: 4 },
-                { subject: 'Bahasa Indonesia', teacher: 'Bu Sari', time: '10:10 - 10:50', period: 5 },
-                { subject: 'Bahasa Inggris', teacher: 'Ms. Linda', time: '10:50 - 11:30', period: 6 },
-                { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
-                { subject: 'Sejarah', teacher: 'Bu Rina', time: '13:00 - 13:40', period: 7 },
-                { subject: 'Geografi', teacher: 'Pak Joko', time: '13:40 - 14:20', period: 8 },
-                { subject: 'PKN', teacher: 'Pak Hadi', time: '14:20 - 15:00', period: 9 }
-            ],
-            'X-TAB-B': [
-                { subject: 'Biologi', teacher: 'Bu Tina', time: '07:15 - 07:55', period: 1 },
-                { subject: 'Matematika', teacher: 'Pak Budi', time: '07:55 - 08:35', period: 2 },
-                { subject: 'Fisika', teacher: 'Pak Dedi', time: '08:35 - 09:15', period: 3 },
-                { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
-                { subject: 'Kimia', teacher: 'Bu Lina', time: '09:30 - 10:10', period: 4 },
-                { subject: 'Bahasa Inggris', teacher: 'Ms. Linda', time: '10:10 - 10:50', period: 5 },
-                { subject: 'Bahasa Indonesia', teacher: 'Bu Sari', time: '10:50 - 11:30', period: 6 },
-                { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
-                { subject: 'Ekonomi', teacher: 'Bu Wati', time: '13:00 - 13:40', period: 7 },
-                { subject: 'Sosiologi', teacher: 'Pak Rudi', time: '13:40 - 14:20', period: 8 },
-                { subject: 'Agama', teacher: 'Pak Usman', time: '14:20 - 15:00', period: 9 }
-            ],
-            'XI-DKV': [
-                { subject: 'Desain Grafis', teacher: 'Pak Andi', time: '07:15 - 07:55', period: 1 },
-                { subject: 'Fotografi', teacher: 'Bu Dina', time: '07:55 - 08:35', period: 2 },
-                { subject: 'Ilustrasi', teacher: 'Pak Yoga', time: '08:35 - 09:15', period: 3 },
-                { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
-                { subject: 'Tipografi', teacher: 'Bu Sinta', time: '09:30 - 10:10', period: 4 },
-                { subject: 'Multimedia', teacher: 'Pak Rizki', time: '10:10 - 10:50', period: 5 },
-                { subject: 'Bahasa Indonesia', teacher: 'Bu Sari', time: '10:50 - 11:30', period: 6 },
-                { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
-                { subject: 'Matematika', teacher: 'Pak Budi', time: '13:00 - 13:40', period: 7 },
-                { subject: 'Bahasa Inggris', teacher: 'Ms. Linda', time: '13:40 - 14:20', period: 8 },
-                { subject: 'Sejarah', teacher: 'Bu Rina', time: '14:20 - 15:00', period: 9 }
-            ],
-            'XI-TAB-A': [
-                { subject: 'Akuntansi', teacher: 'Bu Ani', time: '07:15 - 07:55', period: 1 },
-                { subject: 'Ekonomi', teacher: 'Bu Wati', time: '07:55 - 08:35', period: 2 },
-                { subject: 'Administrasi', teacher: 'Pak Eko', time: '08:35 - 09:15', period: 3 },
-                { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
-                { subject: 'Komputer Akuntansi', teacher: 'Bu Fitri', time: '09:30 - 10:10', period: 4 },
-                { subject: 'Bahasa Indonesia', teacher: 'Bu Sari', time: '10:10 - 10:50', period: 5 },
-                { subject: 'Matematika', teacher: 'Pak Budi', time: '10:50 - 11:30', period: 6 },
-                { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
-                { subject: 'Bahasa Inggris', teacher: 'Ms. Linda', time: '13:00 - 13:40', period: 7 },
-                { subject: 'PKN', teacher: 'Pak Hadi', time: '13:40 - 14:20', period: 8 },
-                { subject: 'Agama', teacher: 'Pak Usman', time: '14:20 - 15:00', period: 9 }
-            ],
-            'XI-TAB-B': [
-                { subject: 'Manajemen', teacher: 'Pak Eko', time: '07:15 - 07:55', period: 1 },
-                { subject: 'Pemasaran', teacher: 'Bu Indah', time: '07:55 - 08:35', period: 2 },
-                { subject: 'Akuntansi', teacher: 'Bu Ani', time: '08:35 - 09:15', period: 3 },
-                { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
-                { subject: 'Ekonomi', teacher: 'Bu Wati', time: '09:30 - 10:10', period: 4 },
-                { subject: 'Bahasa Inggris', teacher: 'Ms. Linda', time: '10:10 - 10:50', period: 5 },
-                { subject: 'Matematika', teacher: 'Pak Budi', time: '10:50 - 11:30', period: 6 },
-                { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
-                { subject: 'Bahasa Indonesia', teacher: 'Bu Sari', time: '13:00 - 13:40', period: 7 },
-                { subject: 'Sejarah', teacher: 'Bu Rina', time: '13:40 - 14:20', period: 8 },
-                { subject: 'PKN', teacher: 'Pak Hadi', time: '14:20 - 15:00', period: 9 }
-            ],
-            'XII-DKV': [
-                { subject: 'Portfolio', teacher: 'Pak Andi', time: '07:15 - 07:55', period: 1 },
-                { subject: 'Animasi', teacher: 'Pak Rizki', time: '07:55 - 08:35', period: 2 },
-                { subject: 'Video Editing', teacher: 'Bu Dina', time: '08:35 - 09:15', period: 3 },
-                { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
-                { subject: 'Web Design', teacher: 'Pak Yoga', time: '09:30 - 10:10', period: 4 },
-                { subject: 'Prakerin', teacher: 'Bu Sinta', time: '10:10 - 10:50', period: 5 },
-                { subject: 'Bahasa Indonesia', teacher: 'Bu Sari', time: '10:50 - 11:30', period: 6 },
-                { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
-                { subject: 'Matematika', teacher: 'Pak Budi', time: '13:00 - 13:40', period: 7 },
-                { subject: 'Bahasa Inggris', teacher: 'Ms. Linda', time: '13:40 - 14:20', period: 8 },
-                { subject: 'Agama', teacher: 'Pak Usman', time: '14:20 - 15:00', period: 9 }
-            ],
-            'XII-TAB-A': [
-                { subject: 'Praktik Kerja', teacher: 'Bu Ani', time: '07:15 - 07:55', period: 1 },
-                { subject: 'Kewirausahaan', teacher: 'Bu Indah', time: '07:55 - 08:35', period: 2 },
-                { subject: 'Audit', teacher: 'Pak Eko', time: '08:35 - 09:15', period: 3 },
-                { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
-                { subject: 'Perpajakan', teacher: 'Bu Fitri', time: '09:30 - 10:10', period: 4 },
-                { subject: 'Bahasa Indonesia', teacher: 'Bu Sari', time: '10:10 - 10:50', period: 5 },
-                { subject: 'Matematika', teacher: 'Pak Budi', time: '10:50 - 11:30', period: 6 },
-                { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
-                { subject: 'Bahasa Inggris', teacher: 'Ms. Linda', time: '13:00 - 13:40', period: 7 },
-                { subject: 'PKN', teacher: 'Pak Hadi', time: '13:40 - 14:20', period: 8 },
-                { subject: 'Agama', teacher: 'Pak Usman', time: '14:20 - 15:00', period: 9 }
-            ],
-            'XII-TAB-B': [
-                { subject: 'Simulasi Digital', teacher: 'Pak Rizki', time: '07:15 - 07:55', period: 1 },
-                { subject: 'Bahasa Inggris', teacher: 'Ms. Linda', time: '07:55 - 08:35', period: 2 },
-                { subject: 'Kewirausahaan', teacher: 'Bu Indah', time: '08:35 - 09:15', period: 3 },
-                { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
-                { subject: 'Praktik Kerja', teacher: 'Bu Ani', time: '09:30 - 10:10', period: 4 },
-                { subject: 'Matematika', teacher: 'Pak Budi', time: '10:10 - 10:50', period: 5 },
-                { subject: 'Bahasa Indonesia', teacher: 'Bu Sari', time: '10:50 - 11:30', period: 6 },
-                { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
-                { subject: 'Sejarah', teacher: 'Bu Rina', time: '13:00 - 13:40', period: 7 },
-                { subject: 'PKN', teacher: 'Pak Hadi', time: '13:40 - 14:20', period: 8 },
-                { subject: 'Agama', teacher: 'Pak Usman', time: '14:20 - 15:00', period: 9 }
-            ]
+            'KELAS-2': {
+                1: [ // Senin
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '14:20 - 15:00', period: 9 }
+                ],
+                2: [ // Selasa
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Matematika', teacher: 'Bagus Dwi Wicaksono, S.Pd., Gr.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Matematika', teacher: 'Bagus Dwi Wicaksono, S.Pd., Gr.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'PIPAS', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'PIPAS', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'PIPAS', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '14:20 - 15:00', period: 9 }
+                ],
+                3: [ // Rabu
+                    { subject: 'PJOK', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'PJOK', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'PJOK', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Bahasa Indonesia', teacher: 'Via Veronica, S.Pd.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Bahasa Indonesia', teacher: 'Via Veronica, S.Pd.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Bahasa Indonesia', teacher: 'Via Veronica, S.Pd.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '14:20 - 15:00', period: 9 }
+                ],
+                4: [ // Kamis
+                    { subject: 'Bahasa Inggris', teacher: 'Febriyanti Novitasari, S.Pd., Gr.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Bahasa Inggris', teacher: 'Febriyanti Novitasari, S.Pd., Gr.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Seni dan Budaya', teacher: 'Novia Permata Sari, S.Pd., Gr.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Seni dan Budaya', teacher: 'Novia Permata Sari, S.Pd., Gr.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'PIPAS', teacher: 'Anis Tri Susilosakti, S.Pd., Gr.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'PIPAS', teacher: 'Anis Tri Susilosakti, S.Pd., Gr.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'PIPAS', teacher: 'Anis Tri Susilosakti, S.Pd., Gr.', time: '14:20 - 15:00', period: 9 }
+                ]
+            },
+            'KELAS-3': {
+                1: [ // Senin
+                    { subject: 'PJOK', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'PJOK', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'PJOK', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Bahasa Indonesia', teacher: 'Via Veronica, S.Pd.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Bahasa Indonesia', teacher: 'Via Veronica, S.Pd.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Bahasa Indonesia', teacher: 'Via Veronica, S.Pd.', time: '14:20 - 15:00', period: 9 }
+                ],
+                2: [ // Selasa
+                    { subject: 'Bahasa Dayak', teacher: 'Novia Permata Sari, S.Pd., Gr.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Bahasa Dayak', teacher: 'Novia Permata Sari, S.Pd., Gr.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Sejarah', teacher: 'Dhia Zulfiqar, S.Pd.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Sejarah', teacher: 'Dhia Zulfiqar, S.Pd.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Seni dan Budaya', teacher: 'Novia Permata Sari, S.Pd., Gr.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Seni dan Budaya', teacher: 'Novia Permata Sari, S.Pd., Gr.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'PIPAS', teacher: 'Anis Tri Susilosakti, S.Pd., Gr.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'PIPAS', teacher: 'Anis Tri Susilosakti, S.Pd., Gr.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'PIPAS', teacher: 'Anis Tri Susilosakti, S.Pd., Gr.', time: '14:20 - 15:00', period: 9 }
+                ],
+                3: [ // Rabu
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '14:20 - 15:00', period: 9 }
+                ],
+                4: [ // Kamis
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Dasar Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'PIPAS', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'PIPAS', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'PIPAS', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '14:20 - 15:00', period: 9 }
+                ],
+                5: [ // Jumat
+                    { subject: 'Matematika', teacher: 'Bagus Dwi Wicaksono, S.Pd., Gr.', time: '07:00 - 07:40', period: 1 },
+                    { subject: 'Matematika', teacher: 'Bagus Dwi Wicaksono, S.Pd., Gr.', time: '07:40 - 08:20', period: 2 },
+                    { subject: 'Matematika', teacher: 'Bagus Dwi Wicaksono, S.Pd., Gr.', time: '08:20 - 09:00', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:00 - 09:15', period: 'break1' },
+                    { subject: 'Matematika', teacher: 'Bagus Dwi Wicaksono, S.Pd., Gr.', time: '09:15 - 09:55', period: 4 },
+                    { subject: 'Bahasa Inggris', teacher: 'Febriyanti Novitasari, S.Pd., Gr.', time: '09:55 - 10:35', period: 5 },
+                    { subject: 'Bahasa Inggris', teacher: 'Febriyanti Novitasari, S.Pd., Gr.', time: '10:35 - 11:15', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:15 - 13:00', period: 'break2' },
+                    { subject: 'Informatika', teacher: 'Boby, S.Kom., Gr.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Informatika', teacher: 'Boby, S.Kom., Gr.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Informatika', teacher: 'Boby, S.Kom., Gr.', time: '14:20 - 15:00', period: 9 }
+                ]
+            },
+            'KELAS-4': {
+                1: [ // Senin
+                    { subject: 'Bahasa Indonesia', teacher: 'Maria Anggelina, S.Pd.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Bahasa Indonesia', teacher: 'Maria Anggelina, S.Pd.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Bahasa Indonesia', teacher: 'Maria Anggelina, S.Pd.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Matematika', teacher: 'Rudi Restanto, S.Pd., M.Pd., Gr.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Matematika', teacher: 'Rudi Restanto, S.Pd., M.Pd., Gr.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Matematika', teacher: 'Rudi Restanto, S.Pd., M.Pd., Gr.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Bimbingan dan Konseling', teacher: 'Aldo Tulus Prasetyo, S.Pd., Gr.', time: '14:20 - 15:00', period: 9 }
+                ],
+                2: [ // Selasa
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'PJOK', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'PJOK', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Sejarah', teacher: 'Dhia Zulfiqar, S.Pd.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Sejarah', teacher: 'Dhia Zulfiqar, S.Pd.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Bahasa Dayak', teacher: 'Novia Permata Sari, S.Pd., Gr.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Bahasa Dayak', teacher: 'Novia Permata Sari, S.Pd., Gr.', time: '14:20 - 15:00', period: 9 }
+                ],
+                3: [ // Rabu
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Indah Sari, S.Pd., M.Pd.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Indah Sari, S.Pd., M.Pd.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Indah Sari, S.Pd., M.Pd.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Kelas Industri', teacher: 'Fakhrul Muja, S.I.Kom.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Kelas Industri', teacher: 'Fakhrul Muja, S.I.Kom.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'UI / UX', teacher: 'Boby, S.Kom., Gr.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'UI / UX', teacher: 'Boby, S.Kom., Gr.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'UI / UX', teacher: 'Boby, S.Kom., Gr.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'UI / UX', teacher: 'Boby, S.Kom., Gr.', time: '14:20 - 15:00', period: 9 }
+                ],
+                4: [ // Kamis
+                    { subject: 'Animasi', teacher: 'Siti Andini, S.Ds.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Animasi', teacher: 'Siti Andini, S.Ds.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Animasi', teacher: 'Siti Andini, S.Ds.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Animasi', teacher: 'Siti Andini, S.Ds.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Animasi', teacher: 'Siti Andini, S.Ds.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Animasi', teacher: 'Siti Andini, S.Ds.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Ilustrasi Digital', teacher: 'Nurul Jihan Fadillah, S.Ds.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Ilustrasi Digital', teacher: 'Nurul Jihan Fadillah, S.Ds.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Ilustrasi Digital', teacher: 'Nurul Jihan Fadillah, S.Ds.', time: '14:20 - 15:00', period: 9 }
+                ],
+                5: [ // Jumat
+                    { subject: 'Animasi', teacher: 'Siti Andini, S.Ds.', time: '07:00 - 07:40', period: 1 },
+                    { subject: 'Animasi', teacher: 'Siti Andini, S.Ds.', time: '07:40 - 08:20', period: 2 },
+                    { subject: 'Animasi', teacher: 'Siti Andini, S.Ds.', time: '08:20 - 09:00', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:00 - 09:15', period: 'break1' },
+                    { subject: 'Informatika', teacher: 'Indrawan Budi Pangestu, S.Pd.', time: '09:15 - 09:55', period: 4 },
+                    { subject: 'Informatika', teacher: 'Indrawan Budi Pangestu, S.Pd.', time: '09:55 - 10:35', period: 5 },
+                    { subject: 'Informatika', teacher: 'Indrawan Budi Pangestu, S.Pd.', time: '10:35 - 11:15', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:15 - 13:00', period: 'break2' },
+                    { subject: 'Fotografi dan Videografi', teacher: 'Fakhrul Muja, S.I.Kom.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Fotografi dan Videografi', teacher: 'Fakhrul Muja, S.I.Kom.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Fotografi dan Videografi', teacher: 'Fakhrul Muja, S.I.Kom.', time: '14:20 - 15:00', period: 9 }
+                ]
+            },
+            'KELAS-5': {
+                1: [ // Senin
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Indah Sari, S.Pd., M.Pd.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Indah Sari, S.Pd., M.Pd.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Indah Sari, S.Pd., M.Pd.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Devit, S.Pd.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Devit, S.Pd.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '14:20 - 15:00', period: 9 }
+                ],
+                2: [ // Selasa
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '14:20 - 15:00', period: 9 }
+                ],
+                3: [ // Rabu
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Devit, S.Pd.', time: '14:20 - 15:00', period: 9 }
+                ],
+                4: [ // Kamis
+                    { subject: 'Matematika', teacher: 'Bagus Dwi Wicaksono, S.Pd., Gr.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Matematika', teacher: 'Bagus Dwi Wicaksono, S.Pd., Gr.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Matematika', teacher: 'Bagus Dwi Wicaksono, S.Pd., Gr.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Sejarah', teacher: 'Dhia Zulfiqar, S.Pd.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Sejarah', teacher: 'Dhia Zulfiqar, S.Pd.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Bimbingan dan Konseling', teacher: 'Norma Ida Royana, S.Pd., M.Pd.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Bahasa Inggris', teacher: 'Febriyanti Novitasari, S.Pd., Gr.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Bahasa Inggris', teacher: 'Febriyanti Novitasari, S.Pd., Gr.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Bahasa Inggris', teacher: 'Febriyanti Novitasari, S.Pd., Gr.', time: '14:20 - 15:00', period: 9 }
+                ],
+                5: [ // Jumat
+                    { subject: 'PJOK', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '07:00 - 07:40', period: 1 },
+                    { subject: 'PJOK', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '07:40 - 08:20', period: 2 },
+                    { subject: 'Bahasa Dayak', teacher: 'Novia Permata Sari, S.Pd., Gr.', time: '08:20 - 09:00', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:00 - 09:15', period: 'break1' },
+                    { subject: 'Bahasa Dayak', teacher: 'Novia Permata Sari, S.Pd., Gr.', time: '09:15 - 09:55', period: 4 },
+                    { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '09:55 - 10:35', period: 5 },
+                    { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '10:35 - 11:15', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:15 - 13:00', period: 'break2' },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '14:20 - 15:00', period: 9 }
+                ]
+            },
+            'KELAS-6': {
+                1: [ // Senin
+                    { subject: 'Bahasa Indonesia', teacher: 'Via Veronica, S.Pd.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Bahasa Indonesia', teacher: 'Via Veronica, S.Pd.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Bahasa Indonesia', teacher: 'Via Veronica, S.Pd.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Matematika', teacher: 'Bagus Dwi Wicaksono, S.Pd., Gr.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Matematika', teacher: 'Bagus Dwi Wicaksono, S.Pd., Gr.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Matematika', teacher: 'Bagus Dwi Wicaksono, S.Pd., Gr.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Bahasa Inggris', teacher: 'Febriyanti Novitasari, S.Pd., Gr.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Bahasa Inggris', teacher: 'Febriyanti Novitasari, S.Pd., Gr.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Bahasa Inggris', teacher: 'Febriyanti Novitasari, S.Pd., Gr.', time: '14:20 - 15:00', period: 9 }
+                ],
+                2: [ // Selasa
+                    { subject: 'PJOK', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'PJOK', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Bahasa Dayak', teacher: 'Novia Permata Sari, S.Pd., Gr.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Bahasa Dayak', teacher: 'Novia Permata Sari, S.Pd., Gr.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Bimbingan dan Konseling', teacher: 'Norma Ida Royana, S.Pd., M.Pd.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Sejarah', teacher: 'Dhia Zulfiqar, S.Pd.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Sejarah', teacher: 'Dhia Zulfiqar, S.Pd.', time: '14:20 - 15:00', period: 9 }
+                ],
+                3: [ // Rabu
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '14:20 - 15:00', period: 9 }
+                ],
+                4: [ // Kamis
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '14:20 - 15:00', period: 9 }
+                ],
+                5: [ // Jumat
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '07:00 - 07:40', period: 1 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '07:40 - 08:20', period: 2 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '08:20 - 09:00', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:00 - 09:15', period: 'break1' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Bahrianoor, S.Pd.', time: '09:15 - 09:55', period: 4 },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Devit, S.Pd.', time: '09:55 - 10:35', period: 5 },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Devit, S.Pd.', time: '10:35 - 11:15', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:15 - 13:00', period: 'break2' },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Indah Sari, S.Pd., M.Pd.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Indah Sari, S.Pd., M.Pd.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Indah Sari, S.Pd., M.Pd.', time: '14:20 - 15:00', period: 9 }
+                ]
+            },
+            'KELAS-7': {
+                1: [ // Senin
+                    { subject: 'Digital Marketing', teacher: 'Nurul Jihan Fadillah, S.Ds.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Digital Marketing', teacher: 'Nurul Jihan Fadillah, S.Ds.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Digital Marketing', teacher: 'Nurul Jihan Fadillah, S.Ds.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Indah Sari, S.Pd., M.Pd.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Indah Sari, S.Pd., M.Pd.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Teknik Presentasi', teacher: 'Fakhrul Muja, S.I.Kom.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Teknik Presentasi', teacher: 'Fakhrul Muja, S.I.Kom.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Project Branding', teacher: 'Siti Andini, S.Ds.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Project Branding', teacher: 'Siti Andini, S.Ds.', time: '14:20 - 15:00', period: 9 }
+                ],
+                2: [ // Selasa
+                    { subject: 'Digital Marketing', teacher: 'Nurul Jihan Fadillah, S.Ds.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Digital Marketing', teacher: 'Nurul Jihan Fadillah, S.Ds.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Digital Marketing', teacher: 'Nurul Jihan Fadillah, S.Ds.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Soft Skill', teacher: 'Indrawan Budi Pangestu, S.Pd.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Soft Skill', teacher: 'Indrawan Budi Pangestu, S.Pd.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Soft Skill', teacher: 'Indrawan Budi Pangestu, S.Pd.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Teknik Presentasi', teacher: 'Fakhrul Muja, S.I.Kom.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Teknik Presentasi', teacher: 'Fakhrul Muja, S.I.Kom.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Teknik Presentasi', teacher: 'Fakhrul Muja, S.I.Kom.', time: '14:20 - 15:00', period: 9 }
+                ],
+                3: [ // Rabu - Kosong
+                    { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '14:20 - 15:00', period: 9 }
+                ],
+                4: [ // Kamis
+                    { subject: 'Bahasa Inggris', teacher: 'Ahmad Jumeidi, S.Pd., Gr.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Bahasa Inggris', teacher: 'Ahmad Jumeidi, S.Pd., Gr.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Bahasa Inggris', teacher: 'Ahmad Jumeidi, S.Pd., Gr.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Bahasa Inggris', teacher: 'Ahmad Jumeidi, S.Pd., Gr.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '14:20 - 15:00', period: 9 }
+                ],
+                5: [ // Jumat
+                    { subject: 'Matematika', teacher: 'Rudi Restanto, S.Pd., M.Pd., Gr.', time: '07:00 - 07:40', period: 1 },
+                    { subject: 'Matematika', teacher: 'Rudi Restanto, S.Pd., M.Pd., Gr.', time: '07:40 - 08:20', period: 2 },
+                    { subject: 'Olahraga Tradisional', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '08:20 - 09:00', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:00 - 09:15', period: 'break1' },
+                    { subject: 'Olahraga Tradisional', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '09:15 - 09:55', period: 4 },
+                    { subject: 'Olahraga Tradisional', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '09:55 - 10:35', period: 5 },
+                    { subject: 'Bimbingan dan Konseling', teacher: 'Aldo Tulus Prasetyo, S.Pd., Gr.', time: '10:35 - 11:15', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:15 - 13:00', period: 'break2' },
+                    { subject: 'Bahasa Indonesia', teacher: 'Maria Anggelina, S.Pd.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Bahasa Indonesia', teacher: 'Maria Anggelina, S.Pd.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Bahasa Indonesia', teacher: 'Maria Anggelina, S.Pd.', time: '14:20 - 15:00', period: 9 }
+                ]
+            },
+            'KELAS-8': {
+                1: [ // Senin
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '14:20 - 15:00', period: 9 }
+                ],
+                2: [ // Selasa
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '14:20 - 15:00', period: 9 }
+                ],
+                3: [ // Rabu
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Indah Sari, S.Pd., M.Pd.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Indah Sari, S.Pd., M.Pd.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Minir, A.Md.T.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Minir, A.Md.T.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Minir, A.Md.T.', time: '14:20 - 15:00', period: 9 }
+                ],
+                4: [ // Kamis
+                    { subject: 'Matematika', teacher: 'Rudi Restanto, S.Pd., M.Pd., Gr.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Matematika', teacher: 'Rudi Restanto, S.Pd., M.Pd., Gr.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Bimbingan dan Konseling', teacher: 'Aldo Tulus Prasetyo, S.Pd., Gr.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Bimbingan dan Konseling', teacher: 'Aldo Tulus Prasetyo, S.Pd., Gr.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Bahasa Inggris', teacher: 'Ahmad Jumeidi, S.Pd., Gr.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Bahasa Inggris', teacher: 'Ahmad Jumeidi, S.Pd., Gr.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Bahasa Indonesia', teacher: 'Maria Anggelina, S.Pd.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Bahasa Indonesia', teacher: 'Maria Anggelina, S.Pd.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Bahasa Indonesia', teacher: 'Maria Anggelina, S.Pd.', time: '14:20 - 15:00', period: 9 }
+                ],
+                5: [ // Jumat
+                    { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '07:00 - 07:40', period: 1 },
+                    { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '07:40 - 08:20', period: 2 },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '08:20 - 09:00', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:00 - 09:15', period: 'break1' },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '09:15 - 09:55', period: 4 },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '09:55 - 10:35', period: 5 },
+                    { subject: 'Matematika', teacher: 'Rudi Restanto, S.Pd., M.Pd., Gr.', time: '10:35 - 11:15', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:15 - 13:00', period: 'break2' },
+                    { subject: 'Matematika', teacher: 'Rudi Restanto, S.Pd., M.Pd., Gr.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Bahasa Inggris', teacher: 'Ahmad Jumeidi, S.Pd., Gr.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Bahasa Inggris', teacher: 'Ahmad Jumeidi, S.Pd., Gr.', time: '14:20 - 15:00', period: 9 }
+                ]
+            },
+            'KELAS-9': {
+                1: [ // Senin
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Olahraga Tradisional', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Olahraga Tradisional', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Olahraga Tradisional', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Bimbingan dan Konseling', teacher: 'Aldo Tulus Prasetyo, S.Pd., Gr.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Bahasa Inggris', teacher: 'Ahmad Jumeidi, S.Pd., Gr.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Bahasa Inggris', teacher: 'Ahmad Jumeidi, S.Pd., Gr.', time: '14:20 - 15:00', period: 9 }
+                ],
+                2: [ // Selasa
+                    { subject: 'Bahasa Inggris', teacher: 'Ahmad Jumeidi, S.Pd., Gr.', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Bahasa Inggris', teacher: 'Ahmad Jumeidi, S.Pd., Gr.', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Matematika', teacher: 'Rudi Restanto, S.Pd., M.Pd., Gr.', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Matematika', teacher: 'Rudi Restanto, S.Pd., M.Pd., Gr.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Matematika', teacher: 'Rudi Restanto, S.Pd., M.Pd., Gr.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Matematika', teacher: 'Rudi Restanto, S.Pd., M.Pd., Gr.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Bimbingan dan Konseling', teacher: 'Aldo Tulus Prasetyo, S.Pd., Gr.', time: '14:20 - 15:00', period: 9 }
+                ],
+                3: [ // Rabu
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Winarto', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Winarto', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Winarto', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Winarto', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Winarto', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Winarto', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Winarto', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Winarto', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Winarto', time: '14:20 - 15:00', period: 9 }
+                ],
+                4: [ // Kamis
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '07:15 - 07:55', period: 1 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '07:55 - 08:35', period: 2 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Al Haqi Rahmad Sandy, S.Pd., Gr', time: '08:35 - 09:15', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:15 - 09:30', period: 'break1' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '09:30 - 10:10', period: 4 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '10:10 - 10:50', period: 5 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '10:50 - 11:30', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:30 - 13:00', period: 'break2' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Minir, A.Md.T.', time: '14:20 - 15:00', period: 9 }
+                ],
+                5: [ // Jumat
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '07:00 - 07:40', period: 1 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '07:40 - 08:20', period: 2 },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '08:20 - 09:00', period: 3 },
+                    { subject: 'Istirahat', teacher: '', time: '09:00 - 09:15', period: 'break1' },
+                    { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '09:15 - 09:55', period: 4 },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Indah Sari, S.Pd., M.Pd.', time: '09:55 - 10:35', period: 5 },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Indah Sari, S.Pd., M.Pd.', time: '10:35 - 11:15', period: 6 },
+                    { subject: 'Istirahat', teacher: '', time: '11:15 - 13:00', period: 'break2' },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Minir, A.Md.T.', time: '13:00 - 13:40', period: 7 },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Minir, A.Md.T.', time: '13:40 - 14:20', period: 8 },
+                    { subject: 'Project Kreatif dan KWU', teacher: 'Minir, A.Md.T.', time: '14:20 - 15:00', period: 9 }
+                ]
+            }
         };
 
         // Data jadwal khusus hari Jumat
         const fridaySchedules = {
-            'X-DKV': [
-                { subject: 'Matematika', teacher: 'Pak Budi', time: '07:00 - 07:40', period: 1 },
-                { subject: 'Bahasa Indonesia', teacher: 'Bu Sari', time: '07:40 - 08:20', period: 2 },
-                { subject: 'Desain Dasar', teacher: 'Pak Andi', time: '08:20 - 09:00', period: 3 },
+            'KELAS-1': [
+                { subject: 'Sejarah', teacher: 'Dhia Zulfiqar, S.Pd.', time: '07:00 - 07:40', period: 1 },
+                { subject: 'Sejarah', teacher: 'Dhia Zulfiqar, S.Pd.', time: '07:40 - 08:20', period: 2 },
+                { subject: 'Bahasa Inggris', teacher: 'Ahmad Jumeidi, S.Pd., Gr.', time: '08:20 - 09:00', period: 3 },
                 { subject: 'Istirahat', teacher: '', time: '09:00 - 09:15', period: 'break1' },
-                { subject: 'Seni Budaya', teacher: 'Bu Maya', time: '09:15 - 09:55', period: 4 },
-                { subject: 'Bahasa Inggris', teacher: 'Ms. Linda', time: '09:55 - 10:35', period: 5 },
-                { subject: 'Fisika', teacher: 'Pak Dedi', time: '10:35 - 11:15', period: 6 },
+                { subject: 'Bahasa Inggris', teacher: 'Ahmad Jumeidi, S.Pd., Gr.', time: '09:15 - 09:55', period: 4 },
+                { subject: 'Bahasa Dayak', teacher: 'Novia Permata Sari, S.Pd., Gr.', time: '09:55 - 10:35', period: 5 },
+                { subject: 'Bahasa Dayak', teacher: 'Novia Permata Sari, S.Pd., Gr.', time: '10:35 - 11:15', period: 6 },
                 { subject: 'Istirahat', teacher: '', time: '11:15 - 13:00', period: 'break2' },
-                { subject: 'Sejarah', teacher: 'Bu Rina', time: '13:00 - 13:40', period: 7 },
-                { subject: 'PKN', teacher: 'Pak Hadi', time: '13:40 - 14:20', period: 8 },
-                { subject: 'Agama', teacher: 'Pak Usman', time: '14:20 - 15:00', period: 9 }
+                { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '13:00 - 13:40', period: 7 },
+                { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '13:40 - 14:20', period: 8 },
+                { subject: 'Bimbingan dan Konseling', teacher: 'Norma Ida Royana, S.Pd., M.Pd.', time: '14:20 - 15:00', period: 9 }
             ],
-            'X-TAB-A': [
-                { subject: 'Fisika', teacher: 'Pak Dedi', time: '07:00 - 07:40', period: 1 },
-                { subject: 'Kimia', teacher: 'Bu Lina', time: '07:40 - 08:20', period: 2 },
-                { subject: 'Matematika', teacher: 'Pak Budi', time: '08:20 - 09:00', period: 3 },
+            'KELAS-2': [
+                { subject: 'Informatika', teacher: 'Boby, S.Kom., Gr.', time: '07:00 - 07:40', period: 1 },
+                { subject: 'Informatika', teacher: 'Boby, S.Kom., Gr.', time: '07:40 - 08:20', period: 2 },
+                { subject: 'Informatika', teacher: 'Boby, S.Kom., Gr.', time: '08:20 - 09:00', period: 3 },
                 { subject: 'Istirahat', teacher: '', time: '09:00 - 09:15', period: 'break1' },
-                { subject: 'Biologi', teacher: 'Bu Tina', time: '09:15 - 09:55', period: 4 },
-                { subject: 'Bahasa Indonesia', teacher: 'Bu Sari', time: '09:55 - 10:35', period: 5 },
-                { subject: 'Bahasa Inggris', teacher: 'Ms. Linda', time: '10:35 - 11:15', period: 6 },
+                { subject: 'Sejarah', teacher: 'Dhia Zulfiqar, S.Pd.', time: '09:15 - 09:55', period: 4 },
+                { subject: 'Sejarah', teacher: 'Dhia Zulfiqar, S.Pd.', time: '09:55 - 10:35', period: 5 },
+                { subject: 'Matematika', teacher: 'Bagus Dwi Wicaksono, S.Pd., Gr.', time: '10:35 - 11:15', period: 6 },
                 { subject: 'Istirahat', teacher: '', time: '11:15 - 13:00', period: 'break2' },
-                { subject: 'Sejarah', teacher: 'Bu Rina', time: '13:00 - 13:40', period: 7 },
-                { subject: 'Geografi', teacher: 'Pak Joko', time: '13:40 - 14:20', period: 8 },
-                { subject: 'PKN', teacher: 'Pak Hadi', time: '14:20 - 15:00', period: 9 }
+                { subject: 'Matematika', teacher: 'Bagus Dwi Wicaksono, S.Pd., Gr.', time: '13:00 - 13:40', period: 7 },
+                { subject: 'Bahasa Inggris', teacher: 'Febriyanti Novitasari, S.Pd., Gr.', time: '13:40 - 14:20', period: 8 },
+                { subject: 'Bahasa Inggris', teacher: 'Febriyanti Novitasari, S.Pd., Gr.', time: '14:20 - 15:00', period: 9 }
             ],
-            'X-TAB-B': [
-                { subject: 'Biologi', teacher: 'Bu Tina', time: '07:00 - 07:40', period: 1 },
-                { subject: 'Matematika', teacher: 'Pak Budi', time: '07:40 - 08:20', period: 2 },
-                { subject: 'Fisika', teacher: 'Pak Dedi', time: '08:20 - 09:00', period: 3 },
+            'KELAS-3': [
+                { subject: 'Matematika', teacher: 'Bagus Dwi Wicaksono, S.Pd., Gr.', time: '07:00 - 07:40', period: 1 },
+                { subject: 'Matematika', teacher: 'Bagus Dwi Wicaksono, S.Pd., Gr.', time: '07:40 - 08:20', period: 2 },
+                { subject: 'Matematika', teacher: 'Bagus Dwi Wicaksono, S.Pd., Gr.', time: '08:20 - 09:00', period: 3 },
                 { subject: 'Istirahat', teacher: '', time: '09:00 - 09:15', period: 'break1' },
-                { subject: 'Kimia', teacher: 'Bu Lina', time: '09:15 - 09:55', period: 4 },
-                { subject: 'Bahasa Inggris', teacher: 'Ms. Linda', time: '09:55 - 10:35', period: 5 },
-                { subject: 'Bahasa Indonesia', teacher: 'Bu Sari', time: '10:35 - 11:15', period: 6 },
+                { subject: 'Matematika', teacher: 'Bagus Dwi Wicaksono, S.Pd., Gr.', time: '09:15 - 09:55', period: 4 },
+                { subject: 'Bahasa Inggris', teacher: 'Febriyanti Novitasari, S.Pd., Gr.', time: '09:55 - 10:35', period: 5 },
+                { subject: 'Bahasa Inggris', teacher: 'Febriyanti Novitasari, S.Pd., Gr.', time: '10:35 - 11:15', period: 6 },
                 { subject: 'Istirahat', teacher: '', time: '11:15 - 13:00', period: 'break2' },
-                { subject: 'Ekonomi', teacher: 'Bu Wati', time: '13:00 - 13:40', period: 7 },
-                { subject: 'Sosiologi', teacher: 'Pak Rudi', time: '13:40 - 14:20', period: 8 },
-                { subject: 'Agama', teacher: 'Pak Usman', time: '14:20 - 15:00', period: 9 }
+                { subject: 'Informatika', teacher: 'Boby, S.Kom., Gr.', time: '13:00 - 13:40', period: 7 },
+                { subject: 'Informatika', teacher: 'Boby, S.Kom., Gr.', time: '13:40 - 14:20', period: 8 },
+                { subject: 'Informatika', teacher: 'Boby, S.Kom., Gr.', time: '14:20 - 15:00', period: 9 }
             ],
-            'XI-DKV': [
-                { subject: 'Desain Grafis', teacher: 'Pak Andi', time: '07:00 - 07:40', period: 1 },
-                { subject: 'Fotografi', teacher: 'Bu Dina', time: '07:40 - 08:20', period: 2 },
-                { subject: 'Ilustrasi', teacher: 'Pak Yoga', time: '08:20 - 09:00', period: 3 },
+            'KELAS-4': [
+                { subject: 'Animasi', teacher: 'Siti Andini, S.Ds.', time: '07:00 - 07:40', period: 1 },
+                { subject: 'Animasi', teacher: 'Siti Andini, S.Ds.', time: '07:40 - 08:20', period: 2 },
+                { subject: 'Animasi', teacher: 'Siti Andini, S.Ds.', time: '08:20 - 09:00', period: 3 },
                 { subject: 'Istirahat', teacher: '', time: '09:00 - 09:15', period: 'break1' },
-                { subject: 'Tipografi', teacher: 'Bu Sinta', time: '09:15 - 09:55', period: 4 },
-                { subject: 'Multimedia', teacher: 'Pak Rizki', time: '09:55 - 10:35', period: 5 },
-                { subject: 'Bahasa Indonesia', teacher: 'Bu Sari', time: '10:35 - 11:15', period: 6 },
+                { subject: 'Informatika', teacher: 'Indrawan Budi Pangestu, S.Pd.', time: '09:15 - 09:55', period: 4 },
+                { subject: 'Informatika', teacher: 'Indrawan Budi Pangestu, S.Pd.', time: '09:55 - 10:35', period: 5 },
+                { subject: 'Informatika', teacher: 'Indrawan Budi Pangestu, S.Pd.', time: '10:35 - 11:15', period: 6 },
                 { subject: 'Istirahat', teacher: '', time: '11:15 - 13:00', period: 'break2' },
-                { subject: 'Matematika', teacher: 'Pak Budi', time: '13:00 - 13:40', period: 7 },
-                { subject: 'Bahasa Inggris', teacher: 'Ms. Linda', time: '13:40 - 14:20', period: 8 },
-                { subject: 'Sejarah', teacher: 'Bu Rina', time: '14:20 - 15:00', period: 9 }
+                { subject: 'Fotografi dan Videografi', teacher: 'Fakhrul Muja, S.I.Kom.', time: '13:00 - 13:40', period: 7 },
+                { subject: 'Fotografi dan Videografi', teacher: 'Fakhrul Muja, S.I.Kom.', time: '13:40 - 14:20', period: 8 },
+                { subject: 'Fotografi dan Videografi', teacher: 'Fakhrul Muja, S.I.Kom.', time: '14:20 - 15:00', period: 9 }
             ],
-            'XI-TAB-A': [
-                { subject: 'Akuntansi', teacher: 'Bu Ani', time: '07:00 - 07:40', period: 1 },
-                { subject: 'Ekonomi', teacher: 'Bu Wati', time: '07:40 - 08:20', period: 2 },
-                { subject: 'Administrasi', teacher: 'Pak Eko', time: '08:20 - 09:00', period: 3 },
+            'KELAS-5': [
+                { subject: 'PJOK', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '07:00 - 07:40', period: 1 },
+                { subject: 'PJOK', teacher: 'Muhammad Faaiz Irfai D, S.Pd.', time: '07:40 - 08:20', period: 2 },
+                { subject: 'Bahasa Dayak', teacher: 'Novia Permata Sari, S.Pd., Gr.', time: '08:20 - 09:00', period: 3 },
                 { subject: 'Istirahat', teacher: '', time: '09:00 - 09:15', period: 'break1' },
-                { subject: 'Komputer Akuntansi', teacher: 'Bu Fitri', time: '09:15 - 09:55', period: 4 },
-                { subject: 'Bahasa Indonesia', teacher: 'Bu Sari', time: '09:55 - 10:35', period: 5 },
-                { subject: 'Matematika', teacher: 'Pak Budi', time: '10:35 - 11:15', period: 6 },
+                { subject: 'Bahasa Dayak', teacher: 'Novia Permata Sari, S.Pd., Gr.', time: '09:15 - 09:55', period: 4 },
+                { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '09:55 - 10:35', period: 5 },
+                { subject: 'Pendidikan Pancasila', teacher: 'Unsu Sulastri, S.Pd.', time: '10:35 - 11:15', period: 6 },
                 { subject: 'Istirahat', teacher: '', time: '11:15 - 13:00', period: 'break2' },
-                { subject: 'Bahasa Inggris', teacher: 'Ms. Linda', time: '13:00 - 13:40', period: 7 },
-                { subject: 'PKN', teacher: 'Pak Hadi', time: '13:40 - 14:20', period: 8 },
-                { subject: 'Agama', teacher: 'Pak Usman', time: '14:20 - 15:00', period: 9 }
+                { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '13:00 - 13:40', period: 7 },
+                { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '13:40 - 14:20', period: 8 },
+                { subject: 'Pendidikan Agama', teacher: 'Asyrofulmuttaqin, S.H.', time: '14:20 - 15:00', period: 9 }
             ],
-            'XI-TAB-B': [
-                { subject: 'Manajemen', teacher: 'Pak Eko', time: '07:00 - 07:40', period: 1 },
-                { subject: 'Pemasaran', teacher: 'Bu Indah', time: '07:40 - 08:20', period: 2 },
-                { subject: 'Akuntansi', teacher: 'Bu Ani', time: '08:20 - 09:00', period: 3 },
+            'KELAS-6': [
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '07:00 - 07:40', period: 1 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '07:40 - 08:20', period: 2 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '08:20 - 09:00', period: 3 },
                 { subject: 'Istirahat', teacher: '', time: '09:00 - 09:15', period: 'break1' },
-                { subject: 'Ekonomi', teacher: 'Bu Wati', time: '09:15 - 09:55', period: 4 },
-                { subject: 'Bahasa Inggris', teacher: 'Ms. Linda', time: '09:55 - 10:35', period: 5 },
-                { subject: 'Matematika', teacher: 'Pak Budi', time: '10:35 - 11:15', period: 6 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '09:15 - 09:55', period: 4 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '09:55 - 10:35', period: 5 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '10:35 - 11:15', period: 6 },
                 { subject: 'Istirahat', teacher: '', time: '11:15 - 13:00', period: 'break2' },
-                { subject: 'Bahasa Indonesia', teacher: 'Bu Sari', time: '13:00 - 13:40', period: 7 },
-                { subject: 'Sejarah', teacher: 'Bu Rina', time: '13:40 - 14:20', period: 8 },
-                { subject: 'PKN', teacher: 'Pak Hadi', time: '14:20 - 15:00', period: 9 }
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '13:00 - 13:40', period: 7 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '13:40 - 14:20', period: 8 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '14:20 - 15:00', period: 9 }
             ],
-            'XII-DKV': [
-                { subject: 'Portfolio', teacher: 'Pak Andi', time: '07:00 - 07:40', period: 1 },
-                { subject: 'Animasi', teacher: 'Pak Rizki', time: '07:40 - 08:20', period: 2 },
-                { subject: 'Video Editing', teacher: 'Bu Dina', time: '08:20 - 09:00', period: 3 },
+            'KELAS-7': [
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '07:00 - 07:40', period: 1 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '07:40 - 08:20', period: 2 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '08:20 - 09:00', period: 3 },
                 { subject: 'Istirahat', teacher: '', time: '09:00 - 09:15', period: 'break1' },
-                { subject: 'Web Design', teacher: 'Pak Yoga', time: '09:15 - 09:55', period: 4 },
-                { subject: 'Prakerin', teacher: 'Bu Sinta', time: '09:55 - 10:35', period: 5 },
-                { subject: 'Bahasa Indonesia', teacher: 'Bu Sari', time: '10:35 - 11:15', period: 6 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '09:15 - 09:55', period: 4 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '09:55 - 10:35', period: 5 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '10:35 - 11:15', period: 6 },
                 { subject: 'Istirahat', teacher: '', time: '11:15 - 13:00', period: 'break2' },
-                { subject: 'Matematika', teacher: 'Pak Budi', time: '13:00 - 13:40', period: 7 },
-                { subject: 'Bahasa Inggris', teacher: 'Ms. Linda', time: '13:40 - 14:20', period: 8 },
-                { subject: 'Agama', teacher: 'Pak Usman', time: '14:20 - 15:00', period: 9 }
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '13:00 - 13:40', period: 7 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '13:40 - 14:20', period: 8 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '14:20 - 15:00', period: 9 }
             ],
-            'XII-TAB-A': [
-                { subject: 'Praktik Kerja', teacher: 'Bu Ani', time: '07:00 - 07:40', period: 1 },
-                { subject: 'Kewirausahaan', teacher: 'Bu Indah', time: '07:40 - 08:20', period: 2 },
-                { subject: 'Audit', teacher: 'Pak Eko', time: '08:20 - 09:00', period: 3 },
+            'KELAS-8': [
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '07:00 - 07:40', period: 1 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '07:40 - 08:20', period: 2 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '08:20 - 09:00', period: 3 },
                 { subject: 'Istirahat', teacher: '', time: '09:00 - 09:15', period: 'break1' },
-                { subject: 'Perpajakan', teacher: 'Bu Fitri', time: '09:15 - 09:55', period: 4 },
-                { subject: 'Bahasa Indonesia', teacher: 'Bu Sari', time: '09:55 - 10:35', period: 5 },
-                { subject: 'Matematika', teacher: 'Pak Budi', time: '10:35 - 11:15', period: 6 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '09:15 - 09:55', period: 4 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '09:55 - 10:35', period: 5 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '10:35 - 11:15', period: 6 },
                 { subject: 'Istirahat', teacher: '', time: '11:15 - 13:00', period: 'break2' },
-                { subject: 'Bahasa Inggris', teacher: 'Ms. Linda', time: '13:00 - 13:40', period: 7 },
-                { subject: 'PKN', teacher: 'Pak Hadi', time: '13:40 - 14:20', period: 8 },
-                { subject: 'Agama', teacher: 'Pak Usman', time: '14:20 - 15:00', period: 9 }
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '13:00 - 13:40', period: 7 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '13:40 - 14:20', period: 8 },
+                { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '14:20 - 15:00', period: 9 }
             ],
-            'XII-TAB-B': [
-                { subject: 'Simulasi Digital', teacher: 'Pak Rizki', time: '07:00 - 07:40', period: 1 },
-                { subject: 'Bahasa Inggris', teacher: 'Ms. Linda', time: '07:40 - 08:20', period: 2 },
-                { subject: 'Kewirausahaan', teacher: 'Bu Indah', time: '08:20 - 09:00', period: 3 },
+            'KELAS-9': [
+                { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '07:00 - 07:40', period: 1 },
+                { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '07:40 - 08:20', period: 2 },
+                { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '08:20 - 09:00', period: 3 },
                 { subject: 'Istirahat', teacher: '', time: '09:00 - 09:15', period: 'break1' },
-                { subject: 'Praktik Kerja', teacher: 'Bu Ani', time: '09:15 - 09:55', period: 4 },
-                { subject: 'Matematika', teacher: 'Pak Budi', time: '09:55 - 10:35', period: 5 },
-                { subject: 'Bahasa Indonesia', teacher: 'Bu Sari', time: '10:35 - 11:15', period: 6 },
+                { subject: 'Kejuruan Teknik Alat Berat', teacher: 'Yosafat Dilianto Sigalingging, S.Pd., Gr.', time: '09:15 - 09:55', period: 4 },
+                { subject: 'Project Kreatif dan KWU', teacher: 'Indah Sari, S.Pd., M.Pd.', time: '09:55 - 10:35', period: 5 },
+                { subject: 'Project Kreatif dan KWU', teacher: 'Indah Sari, S.Pd., M.Pd.', time: '10:35 - 11:15', period: 6 },
                 { subject: 'Istirahat', teacher: '', time: '11:15 - 13:00', period: 'break2' },
-                { subject: 'Sejarah', teacher: 'Bu Rina', time: '13:00 - 13:40', period: 7 },
-                { subject: 'PKN', teacher: 'Pak Hadi', time: '13:40 - 14:20', period: 8 },
-                { subject: 'Agama', teacher: 'Pak Usman', time: '14:20 - 15:00', period: 9 }
+                { subject: 'Project Kreatif dan KWU', teacher: 'Minir, A.Md.T.', time: '13:00 - 13:40', period: 7 },
+                { subject: 'Project Kreatif dan KWU', teacher: 'Minir, A.Md.T.', time: '13:40 - 14:20', period: 8 },
+                { subject: 'Project Kreatif dan KWU', teacher: 'Minir, A.Md.T.', time: '14:20 - 15:00', period: 9 }
             ]
         };
 
-        // Demo mode variables
-        let demoMode = null; // null = normal, 'before', 'after', 'weekend'
+
 
         function updateClock() {
             const now = new Date();
@@ -601,12 +1161,47 @@
         function getCurrentSchedule(className) {
             const now = new Date();
             const currentTime = now.getHours() * 60 + now.getMinutes(); // Convert to minutes
-            const isFriday = now.getDay() === 5; // 5 = Friday
-            const schedule = isFriday ? fridaySchedules[className] : schedules[className];
+            const dayOfWeek = now.getDay();
+            const isFriday = dayOfWeek === 5; // 5 = Friday
+            const isSaturday = dayOfWeek === 6; // 6 = Saturday
+            
+            let schedule;
+            if (isFriday) {
+                // Check if class has Friday schedule in main schedules object
+                if (schedules[className] && schedules[className][5]) {
+                    schedule = schedules[className][5];
+                } else {
+                    schedule = fridaySchedules[className];
+                }
+            } else if (isSaturday) {
+                schedule = saturdaySchedules[className];
+            } else {
+                // For weekdays (Monday-Thursday), check if class has daily schedules
+                if (schedules[className] && typeof schedules[className] === 'object' && !Array.isArray(schedules[className]) && schedules[className][dayOfWeek]) {
+                    schedule = schedules[className][dayOfWeek];
+                } else if (Array.isArray(schedules[className])) {
+                    schedule = schedules[className];
+                } else {
+                    // Fallback to default schedule
+                    schedule = schedules[className] || [];
+                }
+            }
+            
+            if (!schedule || schedule.length === 0) {
+                return { 
+                    current: { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '07:15 - 07:55', period: 1 },
+                    next: { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '07:55 - 08:35', period: 2 },
+                    currentIndex: 0
+                };
+            }
             
             let currentIndex = -1;
             
             for (let i = 0; i < schedule.length; i++) {
+                if (schedule[i].period === 'break1' || schedule[i].period === 'break2') {
+                    continue; // Skip break periods for current subject detection
+                }
+                
                 const timeRange = schedule[i].time.split(' - ');
                 const startTime = timeRange[0].split(':');
                 const endTime = timeRange[1].split(':');
@@ -620,9 +1215,13 @@
                 }
             }
             
-            // Jika tidak ada mata pelajaran saat ini, cari yang terdekat
+            // Jika tidak ada mata pelajaran saat ini, cari yang terdekat (skip breaks)
             if (currentIndex === -1) {
                 for (let i = 0; i < schedule.length; i++) {
+                    if (schedule[i].period === 'break1' || schedule[i].period === 'break2') {
+                        continue;
+                    }
+                    
                     const timeRange = schedule[i].time.split(' - ');
                     const startTime = timeRange[0].split(':');
                     const startMinutes = parseInt(startTime[0]) * 60 + parseInt(startTime[1]);
@@ -634,10 +1233,53 @@
                 }
             }
             
-            const current = currentIndex >= 0 ? schedule[currentIndex] : schedule[0];
-            const next = currentIndex >= 0 && currentIndex < schedule.length - 1 ? 
-                        schedule[currentIndex + 1] : 
-                        (schedule.length > 1 ? schedule[1] : schedule[0]);
+            // Find current and next non-break subjects
+            let current = null;
+            let next = null;
+            
+            if (currentIndex >= 0) {
+                current = schedule[currentIndex];
+                
+                // Find next non-break subject
+                for (let i = currentIndex + 1; i < schedule.length; i++) {
+                    if (schedule[i].period !== 'break1' && schedule[i].period !== 'break2') {
+                        next = schedule[i];
+                        break;
+                    }
+                }
+            }
+            
+            // If no current found, use first non-break subject
+            if (!current) {
+                for (let i = 0; i < schedule.length; i++) {
+                    if (schedule[i].period !== 'break1' && schedule[i].period !== 'break2') {
+                        current = schedule[i];
+                        break;
+                    }
+                }
+            }
+            
+            // If no next found, use second non-break subject
+            if (!next) {
+                let count = 0;
+                for (let i = 0; i < schedule.length; i++) {
+                    if (schedule[i].period !== 'break1' && schedule[i].period !== 'break2') {
+                        count++;
+                        if (count === 2) {
+                            next = schedule[i];
+                            break;
+                        }
+                    }
+                }
+            }
+            
+            // Fallback if still no subjects found
+            if (!current) {
+                current = { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '07:15 - 07:55', period: 1 };
+            }
+            if (!next) {
+                next = { subject: 'Mata Pelajaran', teacher: 'Nama Guru', time: '07:55 - 08:35', period: 2 };
+            }
             
             return { current, next, currentIndex };
         }
@@ -645,8 +1287,18 @@
         function getCurrentPeriod() {
             const now = new Date();
             const currentTime = now.getHours() * 60 + now.getMinutes();
-            const isFriday = now.getDay() === 5;
-            const schedule = isFriday ? fridaySchedules['X-DKV'] : schedules['X-DKV']; // Use any class schedule as reference
+            const dayOfWeek = now.getDay();
+            const isFriday = dayOfWeek === 5;
+            const isSaturday = dayOfWeek === 6;
+            
+            let schedule;
+            if (isFriday) {
+                schedule = fridaySchedules['KELAS-1'];
+            } else if (isSaturday) {
+                schedule = saturdaySchedules['KELAS-1'];
+            } else {
+                schedule = schedules['KELAS-1'];
+            }
             
             for (let i = 0; i < schedule.length; i++) {
                 const timeRange = schedule[i].time.split(' - ');
@@ -668,9 +1320,13 @@
             }
             
             // Jika di luar jam sekolah
-            if (currentTime < 420) { // Sebelum 07:00
+            if (isFriday && currentTime < 420) { // Jumat sebelum 07:00
                 return 'Belum Mulai';
-            } else if (currentTime > 900) { // Setelah 15:00
+            } else if (!isFriday && currentTime < 435) { // Hari lain sebelum 07:15
+                return 'Belum Mulai';
+            } else if (isSaturday && currentTime > 690) { // Sabtu setelah 11:30
+                return 'Selesai';
+            } else if (!isSaturday && currentTime > 900) { // Hari lain setelah 15:00
                 return 'Selesai';
             } else {
                 return '-';
@@ -678,62 +1334,48 @@
         }
 
         function updateSchedules() {
-            // Demo mode overrides
-            if (demoMode) {
-                let statusMessage, statusTeacher, periodText;
-                
-                if (demoMode === 'before') {
-                    statusMessage = "Pembelajaran Belum Dimulai";
-                    statusTeacher = "Selamat Pagi";
-                    periodText = "Belum Mulai";
-                } else if (demoMode === 'after') {
-                    statusMessage = "Pembelajaran Selesai";
-                    statusTeacher = "Sampai Jumpa Besok";
-                    periodText = "Selesai";
-                } else if (demoMode === 'weekend') {
-                    statusMessage = "Hari Libur";
-                    statusTeacher = "Selamat Akhir Pekan";
-                    periodText = "Libur";
-                }
-                
-                document.getElementById('currentPeriod').textContent = `Jam Ke ${periodText}`;
-                
-                Object.keys(schedules).forEach(className => {
-                    // Update current subject dengan status
-                    document.getElementById(`current-subject-${className}`).textContent = statusMessage;
-                    document.getElementById(`current-teacher-${className}`).textContent = statusTeacher;
-                    document.getElementById(`current-time-${className}`).textContent = "";
-                    
-                    // Update next subject dengan pesan yang sama
-                    document.getElementById(`next-subject-${className}`).textContent = statusMessage;
-                    document.getElementById(`next-teacher-${className}`).textContent = statusTeacher;
-                    document.getElementById(`next-time-${className}`).textContent = "";
-                });
-                return;
-            }
-            
-            // Normal mode - existing logic
             const currentPeriod = getCurrentPeriod();
             document.getElementById('currentPeriod').textContent = `Jam Ke ${currentPeriod}`;
             
             const now = new Date();
             const currentTime = now.getHours() * 60 + now.getMinutes();
-            const isWeekend = now.getDay() === 0 || now.getDay() === 6; // Sunday = 0, Saturday = 6
-            const isFriday = now.getDay() === 5;
+            const dayOfWeek = now.getDay(); // Sunday = 0, Monday = 1, ..., Saturday = 6
+            const isFriday = dayOfWeek === 5;
+            const isSaturday = dayOfWeek === 6;
+            
+            // Cek hari libur nasional
+            const holidayName = isNationalHoliday(now);
+            
+            // Weekend: Minggu penuh, Sabtu setelah jam ke-6 (11:30)
+            const isWeekend = dayOfWeek === 0 || // Seluruh hari Minggu
+                             (isSaturday && currentTime >= 690); // Sabtu mulai 11:30 (690 menit)
             
             // Tentukan jam sekolah berdasarkan hari
-            const schoolStartTime = isFriday ? 420 : 435; // 07:00 untuk Jumat, 07:15 untuk hari lain
-            const schoolEndTime = 900; // 15:00
+            let schoolStartTime, schoolEndTime;
             
-            // Cek apakah di luar jam sekolah atau weekend
-            const isOutsideSchoolHours = isWeekend || currentTime < schoolStartTime || currentTime > schoolEndTime;
+            if (isFriday) {
+                schoolStartTime = 420; // 07:00
+                schoolEndTime = 900;   // 15:00
+            } else if (isSaturday) {
+                schoolStartTime = 435; // 07:15
+                schoolEndTime = 690;   // 11:30 (setelah jam ke-6)
+            } else {
+                schoolStartTime = 435; // 07:15
+                schoolEndTime = 900;   // 15:00
+            }
+            
+            // Cek apakah di luar jam sekolah, weekend, atau libur nasional
+            const isOutsideSchoolHours = holidayName || isWeekend || currentTime < schoolStartTime || currentTime > schoolEndTime;
             
             if (isOutsideSchoolHours) {
                 // Tampilkan status khusus untuk di luar jam sekolah
                 Object.keys(schedules).forEach(className => {
                     let statusMessage, statusTeacher;
                     
-                    if (isWeekend) {
+                    if (holidayName) {
+                        statusMessage = "Hari Libur Nasional";
+                        statusTeacher = holidayName;
+                    } else if (isWeekend) {
                         statusMessage = "Hari Libur";
                         statusTeacher = "Selamat Akhir Pekan";
                     } else if (currentTime < schoolStartTime) {
@@ -772,27 +1414,7 @@
             }
         }
 
-        // Demo mode functions
-        function setDemoMode(mode) {
-            demoMode = mode;
-            updateSchedules();
-            
-            // Update button states
-            document.querySelectorAll('[id^="demo"]').forEach(btn => {
-                btn.classList.remove('ring-2', 'ring-white');
-            });
-            
-            if (mode) {
-                const activeBtn = document.getElementById(`demo${mode.charAt(0).toUpperCase() + mode.slice(1)}Btn`);
-                if (activeBtn) {
-                    activeBtn.classList.add('ring-2', 'ring-white');
-                }
-            } else {
-                document.getElementById('demoNormalBtn').classList.add('ring-2', 'ring-white');
-            }
-            
-            showNotification(`Demo mode: ${mode ? mode : 'normal'}`, 'success');
-        }
+
 
         // Fungsi fullscreen yang diperbaiki
         function toggleFullscreen() {
@@ -886,11 +1508,7 @@
             }, 3000);
         }
 
-        // Event listeners for demo buttons
-        document.getElementById('demoBeforeBtn').addEventListener('click', () => setDemoMode('before'));
-        document.getElementById('demoAfterBtn').addEventListener('click', () => setDemoMode('after'));
-        document.getElementById('demoWeekendBtn').addEventListener('click', () => setDemoMode('weekend'));
-        document.getElementById('demoNormalBtn').addEventListener('click', () => setDemoMode(null));
+
 
         // Event listener untuk tombol fullscreen
         document.getElementById('fullscreenBtn').addEventListener('click', function(e) {
@@ -911,14 +1529,12 @@
         // Update setiap detik
         setInterval(() => {
             updateClock();
-            if (!demoMode) { // Only update schedules automatically in normal mode
-                updateSchedules();
-            }
+            updateSchedules();
         }, 1000);
 
         // Initial update
         updateClock();
         updateSchedules();
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9915a6f707e7fb90',t:'MTc2MDkzMzI4Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9917847e51421c0e',t:'MTc2MDk1Mjg0Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
